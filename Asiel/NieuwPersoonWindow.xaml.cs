@@ -31,10 +31,11 @@ namespace Asiel
         private void btnOpslaan_Click(object sender, RoutedEventArgs e)
         {
             Persoon p = new Persoon();
-            p.AddPersoon(TxtNaam.Text, TxtAchternaam.Text, TxtStraatHuisNr.Text, TxtPostcode.Text, TxtWoonplaats.Text, TxtTelefoon.Text);
+            p.AddPersoon(TxtNaam.Text, TxtAchternaam.Text, TxtStraatHuisNr.Text, TxtPostcode.Text, TxtWoonplaats.Text, TxtTelefoon.Text, _persoonList);
             _listViewPersonen.Items.Clear();
-            _persoonList.Add(p);
+            
             VulView();
+            this.Close();
         }
 
         private void VulView()

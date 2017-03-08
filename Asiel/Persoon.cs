@@ -57,7 +57,7 @@ namespace Asiel
         }
 
 
-        public void AddPersoon(string naamInput, string achternaamInput, string straatInput, string postcodeInput, string woonplaatsInput, string telefoonNrInput)
+        public void AddPersoon(string naamInput, string achternaamInput, string straatInput, string postcodeInput, string woonplaatsInput, string telefoonNrInput, List<Persoon> persoonList )
         {
             Persoon persoon = new Persoon
             {
@@ -67,7 +67,9 @@ namespace Asiel
                 postcode = postcodeInput,
                 woonplaats = woonplaatsInput,
                 telefoonNr = telefoonNrInput
+
             };
+            persoonList.Add(persoon);
         }
     }
 }

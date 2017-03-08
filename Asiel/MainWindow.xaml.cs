@@ -54,6 +54,13 @@ namespace Asiel
 
         private void btnNieuwPersoon_Click(object sender, RoutedEventArgs e)
         {
+            NieuwPersoonWindow nieuwPersoonWindow = new NieuwPersoonWindow(PersoonList, ListviewPersoon);
+            nieuwPersoonWindow.Show();
+        }
+
+        private void ListviewPersoon_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var d = (Persoon) ListviewPersoon.SelectedItem;
 
         }
     }
