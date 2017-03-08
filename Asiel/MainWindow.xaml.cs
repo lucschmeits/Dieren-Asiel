@@ -74,5 +74,10 @@ namespace Asiel
             ListviewReservering.Items.Clear();
             VulView();
         }
+
+        private void ListviewReservering_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

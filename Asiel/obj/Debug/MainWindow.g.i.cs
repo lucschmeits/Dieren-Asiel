@@ -136,6 +136,12 @@ namespace Asiel {
             {
             case 1:
             this.ListviewReservering = ((System.Windows.Controls.ListView)(target));
+            
+            #line 10 "..\..\MainWindow.xaml"
+            this.ListviewReservering.MouseDoubleClick += new System.Windows.Input.MouseButtonEventHandler(this.ListviewReservering_MouseDoubleClick);
+            
+            #line default
+            #line hidden
             return;
             case 2:
             this.ListviewDier = ((System.Windows.Controls.ListView)(target));
