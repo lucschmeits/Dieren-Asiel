@@ -48,7 +48,7 @@ namespace Asiel
         private void ListviewDier_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var d = (Dier) ListviewDier.SelectedItem;
-            var info = new DierInfoWindow(d);
+            var info = new DierInfoWindow(d, DierenList, ListviewDier);
             info.Show();
         }
 
