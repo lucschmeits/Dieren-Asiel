@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asiel
 {
-    class Dier
+   public class Dier
     {
         public enum DierType
         {
@@ -54,6 +54,26 @@ namespace Asiel
             nieuwDier.GeslachtSet = geslacht;
             nieuwDier.DierSet = dier;
             dierList.Add(nieuwDier);
+        }
+
+        public List<Enum> GeslachtList()
+        {
+            List<Enum> GeslachtList = new List<Enum>();
+            foreach (Enum e in Enum.GetValues(typeof(Geslacht)))
+            {
+              GeslachtList.Add(e);
+            }
+            return GeslachtList;
+        }
+
+        public List<Enum> DierList()
+        {
+            List<Enum> DierList = new List<Enum>();
+            foreach (Enum e in Enum.GetValues(typeof(DierType)))
+            {
+                DierList.Add(e);
+            }
+            return DierList;
         }
     }
 }

@@ -1,0 +1,19 @@
+﻿<Window x:Class="Asiel.NieuwDierWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Asiel"
+        mc:Ignorable="d"
+         Title="Dieren asiel - Dier toevoegen" Height="322.432" Width="442.294" Background="#FF5F5C3B" FontFamily="Global Sans Serif" FontSize="16">
+    <Grid>
+        <TextBox x:Name="TxtNaamDier" HorizontalAlignment="Left" Height="23" Margin="10,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="CmbGeslacht" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="CmbDierType" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="btnOpslaan" Content="Toevoegen" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="414" Height="55" Background="#FF51A060" Foreground="White"/>
+        <Label Content="Naam:" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Geslacht:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Dier type:" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+    </Grid>
+</Window>
