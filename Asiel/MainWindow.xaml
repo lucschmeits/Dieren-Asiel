@@ -7,22 +7,26 @@
         mc:Ignorable="d"
        Title="Dieren asiel" Height="516.61" Width="1003.253" Background="#FF5F5C3B" FontFamily="Global Sans Serif" FontSize="16">
     <Grid>
-        <ListView HorizontalAlignment="Left" Height="185" Margin="22,21,0,0" VerticalAlignment="Top" Width="538">
+        <ListView x:Name="ListviewReservering" HorizontalAlignment="Left" Height="185" Margin="22,21,0,0" VerticalAlignment="Top" Width="538">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Persoon" Width="160"/>
+                    <GridViewColumn Header="Dier" Width="160"/>
+                    <GridViewColumn Header="Datum" Width="160"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView HorizontalAlignment="Left" Height="185" Margin="22,249,0,0" VerticalAlignment="Top" Width="538" >
+        <ListView x:Name="ListviewDier" HorizontalAlignment="Left" Height="185" Margin="22,249,0,0" VerticalAlignment="Top" Width="538" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Naam" Width="170" DisplayMemberBinding="{Binding naam}"/>
+                    <GridViewColumn Header="Geslacht" Width="170" DisplayMemberBinding="{Binding GeslachtSet}"/>
+                    <GridViewColumn Header="Diertype" Width="170" DisplayMemberBinding="{Binding DierSet}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="665,21,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FF51A060" Foreground="White"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="665,90,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFFF9B6D"/>
+        <Button x:Name="btnBeheer" Content="Beheer" HorizontalAlignment="Left" Margin="665,21,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FF51A060" Foreground="White"/>
+        <Button x:Name="btnNieuwDier" Content="Nieuw Dier" HorizontalAlignment="Left" Margin="665,90,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFFF9B6D" Foreground="White" Click="btnNieuwDier_Click"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="665,158,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFEAFD89"/>
 
     </Grid>
