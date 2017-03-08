@@ -31,9 +31,9 @@
         <ListView x:Name="ListviewPersoon" HorizontalAlignment="Left" Height="185" Margin="611,249,0,0" VerticalAlignment="Top" Width="422">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Naam" Width="130"/>
-                    <GridViewColumn Header="Achternaam" Width="140"/>
-                    <GridViewColumn Header="Woonplaats" Width="140"/>
+                    <GridViewColumn Header="Naam" Width="130" DisplayMemberBinding="{Binding naam}"/>
+                    <GridViewColumn Header="Achternaam" Width="140" DisplayMemberBinding="{Binding achternaam}"/>
+                    <GridViewColumn Header="Woonplaats" Width="140" DisplayMemberBinding="{Binding woonplaats}"/>
                 </GridView>
             </ListView.View>
         </ListView>
