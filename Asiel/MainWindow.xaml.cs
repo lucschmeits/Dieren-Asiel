@@ -24,26 +24,22 @@ namespace Asiel
 
         public List<Reservering> ReserveringsList { get; set; } = new List<Reservering>();
 
+        public List<Persoon> PersoonList { get; set; } = new List<Persoon>();
+
         public MainWindow()
         {
             InitializeComponent();
-            VulView();
         }
 
         private void btnNieuwDier_Click(object sender, RoutedEventArgs e)
         {
-            NieuwDierWindow niewDier = new NieuwDierWindow(ListviewDier, DierenList);
+            var niewDier = new NieuwDierWindow(ListviewDier, DierenList);
             niewDier.Show();
         }
 
         private void VulView()
         {
-            foreach (Dier d in DierenList)
-            {
-                ListviewDier.Items.Add(d);
-            }
-
-            foreach (Reservering r in ReserveringsList)
+           foreach (var r in ReserveringsList)
             {
                 ListviewReservering.Items.Add(r);
             }
@@ -51,8 +47,8 @@ namespace Asiel
 
         private void ListviewDier_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Dier d = (Dier) ListviewDier.SelectedItem;
-            DierInfoWindow info = new DierInfoWindow(d);
+            var d = (Dier) ListviewDier.SelectedItem;
+            var info = new DierInfoWindow(d);
             info.Show();
         }
     }
