@@ -18,3 +18,5 @@ C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.e
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.pdb
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\DierInfoWindow.g.cs
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\DierInfoWindow.baml
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\NieuwPersoonWindow.g.cs
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\NieuwPersoonWindow.baml

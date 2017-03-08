@@ -48,16 +48,16 @@ namespace Asiel
             set { _woonplaats = value; }
         }
 
-        private int _telefoonNr;
+        private string _telefoonNr;
 
-        public int telefoonNr
+        public string telefoonNr
         {
             get { return _telefoonNr; }
             set { _telefoonNr = value; }
         }
 
 
-        public void AddPersoon(string naamInput, string achternaamInput, string straatInput, string postcodeInput, string woonplaatsInput, int telefoonNrInput)
+        public void AddPersoon(string naamInput, string achternaamInput, string straatInput, string postcodeInput, string woonplaatsInput, string telefoonNrInput)
         {
             Persoon persoon = new Persoon
             {

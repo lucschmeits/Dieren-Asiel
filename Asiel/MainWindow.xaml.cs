@@ -51,5 +51,10 @@ namespace Asiel
             var info = new DierInfoWindow(d);
             info.Show();
         }
+
+        private void btnNieuwPersoon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
