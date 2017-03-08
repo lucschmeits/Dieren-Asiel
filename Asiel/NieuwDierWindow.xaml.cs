@@ -21,11 +21,38 @@ namespace Asiel
     {
         private ListView _listViewDieren;
         private List<Dier> _dierList;
-        public NieuwDierWindow(ListView listViewDieren, List<Dier> dierList )
+
+        public NieuwDierWindow(ListView listViewDieren, List<Dier> dierList)
         {
             InitializeComponent();
+            VulComboBox();
             _listViewDieren = listViewDieren;
             _dierList = dierList;
+        }
+
+        private void btnOpslaan_Click(object sender, RoutedEventArgs e)
+        {
+            Dier.Geslacht selectedGeslacht = (Dier.Geslacht) CmbGeslacht.SelectedItem;
+            Dier.DierType selectedDier = (Dier.DierType) CmbDierType.SelectedItem;
+            Dier dier = new Dier();
+            dier.AddDier(TxtNaamDier.Text, selectedGeslacht, selectedDier, _dierList);
+            _listViewDieren.Items.Clear();
+            VulView();
+        }
+
+        private void VulComboBox()
+        {
+            Dier d = new Dier();
+            CmbDierType.ItemsSource = d.DierList();
+            CmbGeslacht.ItemsSource = d.GeslachtList();
+        }
+
+        private void VulView()
+        {
+            foreach (Dier d in _dierList)
+            {
+                _listViewDieren.Items.Add(d);
+            }
         }
     }
 }

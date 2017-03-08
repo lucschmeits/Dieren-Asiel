@@ -20,11 +20,14 @@ namespace Asiel
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Dier> DierenList { get; set; } = new List<Dier>();
+        private List<Dier> DierenList { get; set; } = new List<Dier>();
+
+        public List<Reservering> ReserveringsList { get; set; } = new List<Reservering>();
 
         public MainWindow()
         {
             InitializeComponent();
+            VulView();
         }
 
         private void btnNieuwDier_Click(object sender, RoutedEventArgs e)
@@ -32,5 +35,20 @@ namespace Asiel
             NieuwDierWindow niewDier = new NieuwDierWindow(ListviewDier, DierenList);
             niewDier.Show();
         }
+
+        private void VulView()
+        {
+            foreach (Dier d in DierenList)
+            {
+                ListviewDier.Items.Add(d);
+            }
+
+            foreach (Reservering r in ReserveringsList)
+            {
+                ListviewReservering.Items.Add(r);
+            }
+        }
+
+       
     }
 }

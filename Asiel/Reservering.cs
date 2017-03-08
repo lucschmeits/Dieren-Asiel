@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asiel
 {
-    class Reservering
+   public class Reservering
     {
         private DateTime _reserveerDateTime;
 

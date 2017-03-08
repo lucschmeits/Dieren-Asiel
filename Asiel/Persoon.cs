@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asiel
 {
-    class Persoon
+   public class Persoon
     {
         private string _naam;
 

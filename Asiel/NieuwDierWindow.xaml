@@ -10,7 +10,7 @@
         <TextBox x:Name="TxtNaamDier" HorizontalAlignment="Left" Height="23" Margin="10,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <ComboBox x:Name="CmbGeslacht" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="150"/>
         <ComboBox x:Name="CmbDierType" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button x:Name="btnOpslaan" Content="Toevoegen" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="414" Height="55" Background="#FF51A060" Foreground="White"/>
+        <Button x:Name="btnOpslaan" Content="Toevoegen" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="414" Height="55" Background="#FF51A060" Foreground="White" Click="btnOpslaan_Click"/>
         <Label Content="Naam:" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Geslacht:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Dier type:" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Foreground="White"/>
