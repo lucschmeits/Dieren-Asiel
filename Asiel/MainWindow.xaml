@@ -10,9 +10,9 @@
         <ListView x:Name="ListviewReservering" HorizontalAlignment="Left" Height="185" Margin="22,21,0,0" VerticalAlignment="Top" Width="538">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Persoon" Width="160"/>
-                    <GridViewColumn Header="Dier" Width="160"/>
-                    <GridViewColumn Header="Datum" Width="160"/>
+                    <GridViewColumn Header="Persoon" Width="160" DisplayMemberBinding="{Binding persoon.naam}"/>
+                    <GridViewColumn Header="Dier" Width="160" DisplayMemberBinding="{Binding dier.DierSet}"/>
+                    <GridViewColumn Header="Datum" Width="160" DisplayMemberBinding="{Binding reserveerDateTime}"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -37,7 +37,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <DatePicker HorizontalAlignment="Left" Margin="611,21,0,0" VerticalAlignment="Top" Width="225"/>
+        <DatePicker x:Name="DatePickerReservering" HorizontalAlignment="Left" Margin="611,21,0,0" VerticalAlignment="Top" Width="225"/>
+        <Button x:Name="BtnReserveer" Content="Reserveer" HorizontalAlignment="Left" Margin="1041,223,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFF15748" Foreground="White" Click="BtnReserveer_Click"/>
 
     </Grid>
 </Window>

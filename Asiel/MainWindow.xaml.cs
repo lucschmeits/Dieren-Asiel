@@ -64,5 +64,15 @@ namespace Asiel
             var info = new PersoonInfoWindow(p, ListviewPersoon, PersoonList);
             info.Show();
         }
+
+        private void BtnReserveer_Click(object sender, RoutedEventArgs e)
+        {
+            var d = (Dier) ListviewDier.SelectedItem;
+            var p = (Persoon) ListviewPersoon.SelectedItem;
+            Reservering reservering = new Reservering();
+            reservering.ReserveerDier(p, d, DatePickerReservering.SelectedDate.Value, ReserveringsList);
+            ListviewReservering.Items.Clear();
+            VulView();
+        }
     }
 }
