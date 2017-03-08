@@ -60,8 +60,9 @@ namespace Asiel
 
         private void ListviewPersoon_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var d = (Persoon) ListviewPersoon.SelectedItem;
-
+            var p = (Persoon) ListviewPersoon.SelectedItem;
+            var info = new PersoonInfoWindow(p, ListviewPersoon, PersoonList);
+            info.Show();
         }
     }
 }

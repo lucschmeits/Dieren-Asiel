@@ -20,10 +20,14 @@ namespace Asiel
     public partial class PersoonInfoWindow : Window
     {
         private Persoon _p;
-        public PersoonInfoWindow(Persoon p)
+        private ListView _listViewPersoon;
+        private List<Persoon> _persoonList;
+        public PersoonInfoWindow(Persoon p, ListView listViewPersoon, List<Persoon> persoonList )
         {
             InitializeComponent();
             _p = p;
+            _listViewPersoon = listViewPersoon;
+            _persoonList = persoonList;
             VulVelden();
         }
 
@@ -35,6 +39,27 @@ namespace Asiel
             TxtPostcode.Text = _p.postcode;
             TxtWoonplaats.Text = _p.woonplaats;
             TxtTelefoon.Text = _p.telefoonNr;
+        }
+
+        private void BtnOpslaan_Click(object sender, RoutedEventArgs e)
+        {
+            _p.naam = TxtNaam.Text;
+            _p.achternaam = TxtAchternaam.Text;
+            _p.straatHuisnr = TxtStraatHuisNr.Text;
+            _p.postcode = TxtPostcode.Text;
+            _p.woonplaats = TxtWoonplaats.Text;
+            _p.telefoonNr = TxtTelefoon.Text;
+            _listViewPersoon.Items.Clear();
+            VulView();
+            this.Close();
+        }
+
+        private void VulView()
+        {
+            foreach (var p in _persoonList)
+            {
+                _listViewPersoon.Items.Add(p);
+            }
         }
     }
 }

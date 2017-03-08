@@ -67,6 +67,9 @@
       <DependentUpon>NieuwPersoonWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Persoon.cs" />
+    <Compile Include="PersoonInfoWindow.xaml.cs">
+      <DependentUpon>PersoonInfoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reservering.cs" />
     <Page Include="BeheerWindow.xaml">
       <SubType>Designer</SubType>
@@ -94,6 +97,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NieuwPersoonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PersoonInfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
