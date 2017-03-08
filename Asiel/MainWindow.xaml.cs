@@ -49,6 +49,11 @@ namespace Asiel
             }
         }
 
-       
+        private void ListviewDier_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Dier d = (Dier) ListviewDier.SelectedItem;
+            DierInfoWindow info = new DierInfoWindow(d);
+            info.Show();
+        }
     }
 }

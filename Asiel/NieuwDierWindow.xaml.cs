@@ -38,6 +38,7 @@ namespace Asiel
             dier.AddDier(TxtNaamDier.Text, selectedGeslacht, selectedDier, _dierList);
             _listViewDieren.Items.Clear();
             VulView();
+            this.Close();
         }
 
         private void VulComboBox()

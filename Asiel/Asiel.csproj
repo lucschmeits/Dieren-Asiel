@@ -57,12 +57,19 @@
     <Compile Include="BeheerWindow.xaml.cs">
       <DependentUpon>BeheerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DierInfoWindow.xaml.cs">
+      <DependentUpon>DierInfoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NieuwDierWindow.xaml.cs">
       <DependentUpon>NieuwDierWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Persoon.cs" />
     <Compile Include="Reservering.cs" />
     <Page Include="BeheerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DierInfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
