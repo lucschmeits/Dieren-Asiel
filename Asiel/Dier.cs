@@ -8,13 +8,13 @@ namespace Asiel
 {
    public class Dier
     {
-        public enum DierType
-        {
-            Hond,
-            Kat,
+        //public enum DierType
+        //{
+        //    Hond,
+        //    Kat,
 
-        }
-        public DierType DierSet { get; set; }
+        //}
+        //public DierType DierSet { get; set; }
 
         public enum Geslacht
         {
@@ -31,21 +31,21 @@ namespace Asiel
             set { _naam = value; }
         }
 
-        private DateTime _laatstUitgelaten;
+        //private DateTime _laatstUitgelaten;
 
-        public DateTime laatstUitgelaten
-        {
-            get { return _laatstUitgelaten; }
-            set { _laatstUitgelaten = value; }
-        }
+        //public DateTime laatstUitgelaten
+        //{
+        //    get { return _laatstUitgelaten; }
+        //    set { _laatstUitgelaten = value; }
+        //}
 
-        private string _extraInfo;
+        //private string _extraInfo;
 
-        public string extraInfo
-        {
-            get { return _extraInfo; }
-            set { _extraInfo = value; }
-        }
+        //public string extraInfo
+        //{
+        //    get { return _extraInfo; }
+        //    set { _extraInfo = value; }
+        //}
 
         public void AddDier(string naam, Geslacht geslacht, DierType dier, List<Dier> dierList)
         {
