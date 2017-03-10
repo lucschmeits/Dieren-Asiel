@@ -7,7 +7,7 @@
         mc:Ignorable="d"
        Title="Dieren asiel" Height="506.103" Width="1320.224" Background="#FF5F5C3B" FontFamily="Global Sans Serif" FontSize="16">
     <Grid>
-        <ListView x:Name="ListviewReservering" HorizontalAlignment="Left" Height="185" Margin="22,21,0,0" VerticalAlignment="Top" Width="538">
+        <ListView x:Name="ListviewReservering" HorizontalAlignment="Left" Height="185" Margin="22,21,0,0" VerticalAlignment="Top" Width="538" MouseDoubleClick="ListviewReservering_MouseDoubleClick">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Persoon" Width="160" DisplayMemberBinding="{Binding persoon.naam}"/>

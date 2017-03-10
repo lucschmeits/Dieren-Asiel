@@ -22,3 +22,5 @@ C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.c
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.exe
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.pdb
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.csprojResolveAssemblyReference.cache
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\ReserveringsInfoWindow.g.cs
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\ReserveringsInfoWindow.baml

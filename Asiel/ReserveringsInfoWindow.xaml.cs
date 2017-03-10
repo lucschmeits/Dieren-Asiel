@@ -19,9 +19,28 @@ namespace Asiel
     /// </summary>
     public partial class ReserveringsInfoWindow : Window
     {
-        public ReserveringsInfoWindow()
+        private Reservering _reservering;
+        public ReserveringsInfoWindow(Reservering reservering)
         {
             InitializeComponent();
+            _reservering = reservering;
+            VulVelden();
+        }
+
+        private void VulVelden()
+        {
+            TxtNaamPersoon.Text = _reservering.persoon.naam;
+            TxtAchternaam.Text = _reservering.persoon.achternaam;
+            TxtStraat.Text = _reservering.persoon.straatHuisnr;
+            TxtPostcode.Text = _reservering.persoon.postcode;
+            TxtWoonplaats.Text = _reservering.persoon.woonplaats;
+            TxtTelefoon.Text = _reservering.persoon.telefoonNr;
+
+            TxtDierNaam.Text = _reservering.dier.naam;
+            TxtDierGeslacht.Text = _reservering.dier.GeslachtSet.ToString();
+            TxtDierType.Text = _reservering.dier.DierSet.ToString();
+            TxtUitgelaten.Text = _reservering.dier.laatstUitgelaten.ToShortDateString();
+            TxtInfo.Text = _reservering.dier.extraInfo;
         }
     }
 }

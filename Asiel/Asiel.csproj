@@ -71,6 +71,9 @@
       <DependentUpon>PersoonInfoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reservering.cs" />
+    <Compile Include="ReserveringsInfoWindow.xaml.cs">
+      <DependentUpon>ReserveringsInfoWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="BeheerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -101,6 +104,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PersoonInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReserveringsInfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

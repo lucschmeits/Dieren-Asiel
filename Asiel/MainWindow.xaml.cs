@@ -54,7 +54,7 @@ namespace Asiel
 
         private void btnNieuwPersoon_Click(object sender, RoutedEventArgs e)
         {
-            NieuwPersoonWindow nieuwPersoonWindow = new NieuwPersoonWindow(PersoonList, ListviewPersoon);
+            var nieuwPersoonWindow = new NieuwPersoonWindow(PersoonList, ListviewPersoon);
             nieuwPersoonWindow.Show();
         }
 
@@ -69,15 +69,34 @@ namespace Asiel
         {
             var d = (Dier) ListviewDier.SelectedItem;
             var p = (Persoon) ListviewPersoon.SelectedItem;
-            Reservering reservering = new Reservering();
-            reservering.ReserveerDier(p, d, DatePickerReservering.SelectedDate.Value, ReserveringsList);
+            var reservering = new Reservering();
+            try
+            {
+                if (p == null || d == null || DatePickerReservering.DisplayDate == default(DateTime))
+                {
+                    MessageBox.Show("Er moet een dier, persoon en een datum geselecteerd zijn");
+                }
+                else
+                {
+                    reservering.ReserveerDier(p, d, DatePickerReservering.SelectedDate.Value, ReserveringsList);
+                }
+               
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Er moet een dier, persoon en een datum geselecteerd zijn");
+            }
+          
+            
             ListviewReservering.Items.Clear();
             VulView();
         }
 
         private void ListviewReservering_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            var r = (Reservering) ListviewReservering.SelectedItem;
+            var reserveringsInfo = new ReserveringsInfoWindow(r);
+            reserveringsInfo.Show();
         }
     }
 }
