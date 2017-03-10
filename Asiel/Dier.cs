@@ -47,14 +47,14 @@ namespace Asiel
         //    set { _extraInfo = value; }
         //}
 
-        public void AddDier(string naam, Geslacht geslacht, DierType dier, List<Dier> dierList)
-        {
-            Dier nieuwDier = new Dier();
-            nieuwDier.naam = naam;
-            nieuwDier.GeslachtSet = geslacht;
-            nieuwDier.DierSet = dier;
-            dierList.Add(nieuwDier);
-        }
+        //public void AddDier(string naam, Geslacht geslacht, DierType dier, List<Dier> dierList)
+        //{
+        //    Dier nieuwDier = new Dier();
+        //    nieuwDier.naam = naam;
+        //    nieuwDier.GeslachtSet = geslacht;
+        //    nieuwDier.DierSet = dier;
+        //    dierList.Add(nieuwDier);
+        //}
 
         public List<Enum> GeslachtList()
         {
@@ -66,12 +66,26 @@ namespace Asiel
             return GeslachtList;
         }
 
-        public List<Enum> DierList()
+        //public List<Enum> DierList()
+        //{
+        //    List<Enum> DierList = new List<Enum>();
+        //    foreach (Enum e in Enum.GetValues(typeof(DierType)))
+        //    {
+        //        DierList.Add(e);
+        //    }
+        //    return DierList;
+        //}
+        public List<String> DierList()
         {
-            List<Enum> DierList = new List<Enum>();
-            foreach (Enum e in Enum.GetValues(typeof(DierType)))
+            List<String> DierList = new List<string>();
+            var subclasses =
+                from assembly in AppDomain.CurrentDomain.GetAssemblies()
+                from type in assembly.GetTypes()
+                where type.IsSubclassOf(typeof(Dier))
+                select type;
+            foreach (var k in subclasses)
             {
-                DierList.Add(e);
+                DierList.Add(k.Name);
             }
             return DierList;
         }

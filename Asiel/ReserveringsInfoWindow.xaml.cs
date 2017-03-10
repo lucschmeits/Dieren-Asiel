@@ -36,11 +36,11 @@ namespace Asiel
             TxtWoonplaats.Text = _reservering.persoon.woonplaats;
             TxtTelefoon.Text = _reservering.persoon.telefoonNr;
 
-            TxtDierNaam.Text = _reservering.dier.naam;
-            TxtDierGeslacht.Text = _reservering.dier.GeslachtSet.ToString();
-            TxtDierType.Text = _reservering.dier.DierSet.ToString();
-            TxtUitgelaten.Text = _reservering.dier.laatstUitgelaten.ToShortDateString();
-            TxtInfo.Text = _reservering.dier.extraInfo;
+            //TxtDierNaam.Text = _reservering.dier.naam;
+            //TxtDierGeslacht.Text = _reservering.dier.GeslachtSet.ToString();
+            //TxtDierType.Text = _reservering.dier.DierSet.ToString();
+            //TxtUitgelaten.Text = _reservering.dier.laatstUitgelaten.ToShortDateString();
+            //TxtInfo.Text = _reservering.dier.extraInfo;
         }
     }
 }

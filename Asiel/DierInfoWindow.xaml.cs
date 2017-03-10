@@ -35,40 +35,45 @@ namespace Asiel
         {
             TxtNaam.Text = _dier.naam;
             TxtGeslacht.Text = _dier.GeslachtSet.ToString();
-            TxtDierType.Text = _dier.DierSet.ToString();
-            if (_dier.DierSet == Dier.DierType.Hond)
+            TxtDierType.Text = _dier.GetType().Name;
+            if (_dier.GetType().Name == "Hond")
             {
                 TxtInfo.Visibility = Visibility.Hidden;
-                if (_dier.laatstUitgelaten == default(DateTime))
-                {
-
-                }
-                else
-                {
-                    DateUitgelaten.Text = _dier.laatstUitgelaten.ToShortDateString();
-                }
-
+                
             }
-            if (_dier.DierSet == Dier.DierType.Kat)
-            {
-                DateUitgelaten.Visibility = Visibility.Hidden;
-                TxtInfo.Text = _dier.extraInfo;
-            }
-           
-            
+            //if (_dier.DierSet == Dier.DierType.Hond)
+            //{
+            //    TxtInfo.Visibility = Visibility.Hidden;
+            //    if (_dier.laatstUitgelaten == default(DateTime))
+            //    {
+
+            //    }
+            //    else
+            //    {
+            //        DateUitgelaten.Text = _dier.laatstUitgelaten.ToShortDateString();
+            //    }
+
+            //}
+            //if (_dier.DierSet == Dier.DierType.Kat)
+            //{
+            //    DateUitgelaten.Visibility = Visibility.Hidden;
+            //    TxtInfo.Text = _dier.extraInfo;
+            //}
+
+
         }
 
         private void BtnBijwerken_Click(object sender, RoutedEventArgs e)
         {
-            _dier.naam = TxtNaam.Text;
-            if (_dier.DierSet == Dier.DierType.Hond)
-            {
-                _dier.laatstUitgelaten = (DateTime)DateUitgelaten.SelectedDate;
-            }
-            if (_dier.DierSet == Dier.DierType.Kat)
-            {
-                _dier.extraInfo = TxtInfo.Text;
-            }
+            //_dier.naam = TxtNaam.Text;
+            //if (_dier.DierSet == Dier.DierType.Hond)
+            //{
+            //    _dier.laatstUitgelaten = (DateTime)DateUitgelaten.SelectedDate;
+            //}
+            //if (_dier.DierSet == Dier.DierType.Kat)
+            //{
+            //    _dier.extraInfo = TxtInfo.Text;
+            //}
             _listViewDieren.Items.Clear();
             VulView();
            this.Close();

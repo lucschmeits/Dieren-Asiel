@@ -32,13 +32,24 @@ namespace Asiel
 
         private void btnOpslaan_Click(object sender, RoutedEventArgs e)
         {
-            Dier.Geslacht selectedGeslacht = (Dier.Geslacht) CmbGeslacht.SelectedItem;
-            Dier.DierType selectedDier = (Dier.DierType) CmbDierType.SelectedItem;
-            Dier dier = new Dier();
-            dier.AddDier(TxtNaamDier.Text, selectedGeslacht, selectedDier, _dierList);
-            _listViewDieren.Items.Clear();
-            VulView();
-            this.Close();
+            if ((String)CmbDierType.SelectedItem == "Hond")
+            {
+               var h = new Hond();
+                Dier.Geslacht geslacht = (Dier.Geslacht) CmbGeslacht.SelectedItem;
+                h.AddHond(TxtNaamDier.Text, geslacht, _dierList);
+                VulView();
+                this.Close();
+               
+            }
+            if ((String) CmbDierType.SelectedItem == "Kat")
+            {
+                var k = new Kat();
+                Dier.Geslacht geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
+                k.AddKat(TxtNaamDier.Text, geslacht, _dierList);
+                VulView();
+                this.Close();
+            }
+       
         }
 
         private void VulComboBox()

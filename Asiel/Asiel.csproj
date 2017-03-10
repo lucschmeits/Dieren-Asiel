@@ -60,6 +60,8 @@
     <Compile Include="DierInfoWindow.xaml.cs">
       <DependentUpon>DierInfoWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Hond.cs" />
+    <Compile Include="Kat.cs" />
     <Compile Include="NieuwDierWindow.xaml.cs">
       <DependentUpon>NieuwDierWindow.xaml</DependentUpon>
     </Compile>
