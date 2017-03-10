@@ -8,7 +8,7 @@ namespace Asiel
 {
     public class Kat : Dier
     {
-        private string Info { get; set; }
+        public string Info { get; set; }
 
         public void AddKat(string name, Geslacht geslacht, List<Dier> dierList )
         {

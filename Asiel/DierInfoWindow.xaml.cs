@@ -22,7 +22,7 @@ namespace Asiel
         private Dier _dier;
         private List<Dier> _dierList;
         private ListView _listViewDieren;
-        public DierInfoWindow(Dier dier, List<Dier> dierList, ListView listViewDieren )
+        public DierInfoWindow(Dier dier, List<Dier> dierList, ListView listViewDieren)
         {
             InitializeComponent();
             _dier = dier;
@@ -36,48 +36,44 @@ namespace Asiel
             TxtNaam.Text = _dier.naam;
             TxtGeslacht.Text = _dier.GeslachtSet.ToString();
             TxtDierType.Text = _dier.GetType().Name;
-            if (_dier.GetType().Name == "Hond")
+            if (_dier.GetType() == typeof(Hond))
             {
+                var h = (Hond)_dier;
                 TxtInfo.Visibility = Visibility.Hidden;
-                
+                if (h.LaatstUitgelaten == default(DateTime))
+                {
+
+                }
+                else
+                {
+                    DateUitgelaten.Text = h.LaatstUitgelaten.ToShortDateString();
+                }
             }
-            //if (_dier.DierSet == Dier.DierType.Hond)
-            //{
-            //    TxtInfo.Visibility = Visibility.Hidden;
-            //    if (_dier.laatstUitgelaten == default(DateTime))
-            //    {
-
-            //    }
-            //    else
-            //    {
-            //        DateUitgelaten.Text = _dier.laatstUitgelaten.ToShortDateString();
-            //    }
-
-            //}
-            //if (_dier.DierSet == Dier.DierType.Kat)
-            //{
-            //    DateUitgelaten.Visibility = Visibility.Hidden;
-            //    TxtInfo.Text = _dier.extraInfo;
-            //}
-
-
+            if (_dier.GetType() == typeof(Kat))
+            {
+                var k = (Kat)_dier;
+                DateUitgelaten.Visibility = Visibility.Hidden;
+                TxtInfo.Text = k.Info;
+            }
         }
 
         private void BtnBijwerken_Click(object sender, RoutedEventArgs e)
         {
-            //_dier.naam = TxtNaam.Text;
-            //if (_dier.DierSet == Dier.DierType.Hond)
-            //{
-            //    _dier.laatstUitgelaten = (DateTime)DateUitgelaten.SelectedDate;
-            //}
-            //if (_dier.DierSet == Dier.DierType.Kat)
-            //{
-            //    _dier.extraInfo = TxtInfo.Text;
-            //}
+            if (_dier.GetType() == typeof(Hond))
+            {
+                var h = (Hond)_dier;
+                h.naam = TxtNaam.Text;
+                h.LaatstUitgelaten = (DateTime)DateUitgelaten.SelectedDate;
+            }
+            if (_dier.GetType() == typeof(Kat))
+            {
+                var k = (Kat)_dier;
+                k.Info = TxtInfo.Text;
+            }
             _listViewDieren.Items.Clear();
             VulView();
-           this.Close();
-            
+            this.Close();
+
         }
 
         private void VulView()
@@ -89,3 +85,5 @@ namespace Asiel
         }
     }
 }
+
+
