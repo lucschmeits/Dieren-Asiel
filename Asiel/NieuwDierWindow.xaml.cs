@@ -55,11 +55,33 @@ namespace Asiel
 
         private void VulComboBox()
         {
-            Dier d = new Dier();
-            CmbDierType.ItemsSource = d.DierList();
-            CmbGeslacht.ItemsSource = d.GeslachtList();
+            CmbDierType.ItemsSource = DierList();
+            CmbGeslacht.ItemsSource = GeslachtList();
+        }
+        private List<Enum> GeslachtList()
+        {
+            List<Enum> GeslachtList = new List<Enum>();
+            foreach (Enum e in Enum.GetValues(typeof(Dier.Geslacht)))
+            {
+                GeslachtList.Add(e);
+            }
+            return GeslachtList;
         }
 
+        private List<string> DierList()
+        {
+            var dierList = new List<string>();
+            var subclasses =
+                from assembly in AppDomain.CurrentDomain.GetAssemblies()
+                from type in assembly.GetTypes()
+                where type.IsSubclassOf(typeof(Dier))
+                select type;
+            foreach (var k in subclasses)
+            {
+                dierList.Add(k.Name);
+            }
+            return dierList;
+        }
         private void VulView()
         {
             foreach (Dier d in _dierList)

@@ -62,6 +62,7 @@ namespace Asiel
             if (_dier.GetType() == typeof(Hond))
             {
                 var h = (Hond)_dier;
+                
                 h.naam = TxtNaam.Text;
                 h.LaatstUitgelaten = (DateTime)DateUitgelaten.SelectedDate;
             }
