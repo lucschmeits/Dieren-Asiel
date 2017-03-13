@@ -25,6 +25,7 @@ namespace Asiel
             InitializeComponent();
             _reservering = reservering;
             VulVelden();
+            VulComboBox();
         }
 
         private void VulVelden()
@@ -50,6 +51,35 @@ namespace Asiel
                 TxtInfo.Text = k.Info;
             }
             
+        }
+
+        private void VulComboBox()
+        {
+            cmbOpgehaald.Items.Add("Opgehaald");
+            cmbOpgehaald.Items.Add("Niet opgehaald");
+            if (_reservering.isOpgehaald)
+            {
+                cmbOpgehaald.Text = "Opgehaald";
+            }
+            else
+            {
+                cmbOpgehaald.Text = "Niet opgehaald";
+            }
+           
+        }
+
+        private void BtnAanpassen_Click(object sender, RoutedEventArgs e)
+        {
+            if (cmbOpgehaald.SelectedItem.ToString() == "Opgehaald")
+            {
+                _reservering.isOpgehaald = true;
+                
+            }
+            else
+            {
+                _reservering.isOpgehaald = false;
+            }
+            this.Close();
         }
     }
 }
