@@ -10,16 +10,7 @@ namespace Asiel
     {
         public DateTime LaatstUitgelaten { get; set; }
 
-        //public void AddHond(string name, Geslacht geslacht, List<Dier> dierList )
-        //{
-        //    var h = new Hond
-        //    {
-        //        naam = name,
-        //        GeslachtSet = geslacht
-        //    };
-        //    dierList.Add(h);
-            
-        //}
+     
 
         public Hond(string naam, Geslacht geslacht)
         {

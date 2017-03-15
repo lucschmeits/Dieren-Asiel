@@ -10,15 +10,7 @@ namespace Asiel
     {
         public string Info { get; set; }
 
-        //public void AddKat(string name, Geslacht geslacht, List<Dier> dierList )
-        //{
-        //    var k = new Kat
-        //    {
-        //        naam = name,
-        //        GeslachtSet = geslacht
-        //    };
-        //    dierList.Add(k);
-        //}
+      
 
         public Kat(string naam, Geslacht geslacht)
         {

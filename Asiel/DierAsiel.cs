@@ -25,5 +25,15 @@ namespace Asiel
         {
             DierList.Add(hond);
         }
+
+        public void AddPersoon(Persoon persoon)
+        {
+            PersoonList.Add(persoon);
+        }
+
+        public void AddReservering(Reservering r)
+        {
+            ReserveringsList.Add(r);
+        }
     }
 }

@@ -19,15 +19,17 @@ namespace Asiel
     /// </summary>
     public partial class PersoonInfoWindow : Window
     {
-        private Persoon _p;
-        private ListView _listViewPersoon;
-        private List<Persoon> _persoonList;
-        public PersoonInfoWindow(Persoon p, ListView listViewPersoon, List<Persoon> persoonList )
+        private readonly Persoon _p;
+        private readonly ListView _listViewPersoon;
+      //  private List<Persoon> _persoonList;
+        private readonly DierAsiel _asiel;
+        public PersoonInfoWindow(Persoon p, ListView listViewPersoon, DierAsiel asiel )
         {
             InitializeComponent();
             _p = p;
             _listViewPersoon = listViewPersoon;
-            _persoonList = persoonList;
+           // _persoonList = persoonList;
+            _asiel = asiel;
             VulVelden();
         }
 
@@ -56,7 +58,7 @@ namespace Asiel
 
         private void VulView()
         {
-            foreach (var p in _persoonList)
+            foreach (var p in _asiel.PersoonList)
             {
                 _listViewPersoon.Items.Add(p);
             }

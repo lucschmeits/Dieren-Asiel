@@ -19,8 +19,8 @@ namespace Asiel
     /// </summary>
     public partial class NieuwDierWindow : Window
     {
-        private ListView _listViewDieren;
-       // private List<Dier> _dierList;
+        private readonly ListView _listViewDieren;
+      
         private readonly DierAsiel _dierAsiel;
 
         public NieuwDierWindow(ListView listViewDieren, DierAsiel dierAsiel)
@@ -28,7 +28,7 @@ namespace Asiel
             InitializeComponent();
             VulComboBox();
             _listViewDieren = listViewDieren;
-           // _dierList = dierList;
+          
             _dierAsiel = dierAsiel;
         }
 

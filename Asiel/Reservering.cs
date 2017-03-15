@@ -41,15 +41,22 @@ namespace Asiel
         }
 
 
-        public void ReserveerDier(Persoon p, Dier d, DateTime datum, List<Reservering> reserveringsList)
+        //public void ReserveerDier(Persoon p, Dier d, DateTime datum, List<Reservering> reserveringsList)
+        //{
+        //    Reservering r = new Reservering
+        //    {
+        //        _persoon = p,
+        //        _dier = d,
+        //        _reserveerDateTime = datum
+        //    };
+        //    reserveringsList.Add(r);
+        //}
+
+        public Reservering(Persoon p, Dier d, DateTime datum)
         {
-            Reservering r = new Reservering
-            {
-                _persoon = p,
-                _dier = d,
-                _reserveerDateTime = datum
-            };
-            reserveringsList.Add(r);
+            _persoon = p;
+            _dier = d;
+            _reserveerDateTime = datum;
         }
     }
 }

@@ -19,19 +19,22 @@ namespace Asiel
     /// </summary>
     public partial class NieuwPersoonWindow : Window
     {
-        private List<Persoon> _persoonList;
-        private ListView _listViewPersonen;
-        public NieuwPersoonWindow(List<Persoon> persoonList, ListView listViewPersonen)
+       // private List<Persoon> _persoonList;
+        private readonly ListView _listViewPersonen;
+        private readonly DierAsiel _dierAsiel;
+        public NieuwPersoonWindow(DierAsiel dierAsiel, ListView listViewPersonen)
         {
             InitializeComponent();
-            _persoonList = persoonList;
+            
+            _dierAsiel = dierAsiel;
             _listViewPersonen = listViewPersonen;
         }
 
         private void btnOpslaan_Click(object sender, RoutedEventArgs e)
         {
-            Persoon p = new Persoon();
-            p.AddPersoon(TxtNaam.Text, TxtAchternaam.Text, TxtStraatHuisNr.Text, TxtPostcode.Text, TxtWoonplaats.Text, TxtTelefoon.Text, _persoonList);
+            var p = new Persoon(TxtNaam.Text, TxtAchternaam.Text, TxtStraatHuisNr.Text, TxtPostcode.Text, TxtWoonplaats.Text, TxtTelefoon.Text);
+            _dierAsiel.AddPersoon(p);
+          
             _listViewPersonen.Items.Clear();
             
             VulView();
@@ -40,7 +43,7 @@ namespace Asiel
 
         private void VulView()
         {
-            foreach (var p in _persoonList)
+            foreach (var p in _dierAsiel.PersoonList)
             {
                 _listViewPersonen.Items.Add(p);
             }

@@ -20,12 +20,8 @@ namespace Asiel
     /// </summary>
     public partial class MainWindow : Window
     {
-        DierAsiel dierAsiel = new DierAsiel();
-       // private List<Dier> DierenList { get; set; } = new List<Dier>();
-
-        public List<Reservering> ReserveringsList { get; set; } = new List<Reservering>();
-
-        public List<Persoon> PersoonList { get; set; } = new List<Persoon>();
+       private readonly DierAsiel _dierAsiel = new DierAsiel();
+      
 
         public MainWindow()
         {
@@ -34,13 +30,13 @@ namespace Asiel
 
         private void btnNieuwDier_Click(object sender, RoutedEventArgs e)
         {
-            var niewDier = new NieuwDierWindow(ListviewDier, dierAsiel);
+            var niewDier = new NieuwDierWindow(ListviewDier, _dierAsiel);
             niewDier.Show();
         }
 
         private void VulView()
         {
-           foreach (var r in ReserveringsList)
+           foreach (var r in _dierAsiel.ReserveringsList)
             {
                 ListviewReservering.Items.Add(r);
             }
@@ -50,20 +46,20 @@ namespace Asiel
         {
             
             var d = (Dier) ListviewDier.SelectedItem;
-            //var info = new DierInfoWindow(d, DierenList, ListviewDier);
-           // info.Show();
+           var info = new DierInfoWindow(d, _dierAsiel, ListviewDier);
+            info.Show();
         }
 
         private void btnNieuwPersoon_Click(object sender, RoutedEventArgs e)
         {
-            var nieuwPersoonWindow = new NieuwPersoonWindow(PersoonList, ListviewPersoon);
+            var nieuwPersoonWindow = new NieuwPersoonWindow(_dierAsiel, ListviewPersoon);
             nieuwPersoonWindow.Show();
         }
 
         private void ListviewPersoon_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var p = (Persoon) ListviewPersoon.SelectedItem;
-            var info = new PersoonInfoWindow(p, ListviewPersoon, PersoonList);
+            var info = new PersoonInfoWindow(p, ListviewPersoon, _dierAsiel);
             info.Show();
         }
 
@@ -71,7 +67,7 @@ namespace Asiel
         {
             var d = (Dier) ListviewDier.SelectedItem;
             var p = (Persoon) ListviewPersoon.SelectedItem;
-            var reservering = new Reservering();
+           // var reservering = new Reservering();
             try
             {
                 if (p == null || d == null || DatePickerReservering.DisplayDate == default(DateTime))
@@ -80,7 +76,9 @@ namespace Asiel
                 }
                 else
                 {
-                    reservering.ReserveerDier(p, d, DatePickerReservering.SelectedDate.Value, ReserveringsList);
+                    var r = new Reservering(p, d, DatePickerReservering.SelectedDate.Value);
+                    _dierAsiel.AddReservering(r);
+                   // reservering.ReserveerDier(p, d, DatePickerReservering.SelectedDate.Value, ReserveringsList);
                 }
                
             }

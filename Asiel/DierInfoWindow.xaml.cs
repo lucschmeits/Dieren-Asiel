@@ -19,14 +19,16 @@ namespace Asiel
     /// </summary>
     public partial class DierInfoWindow : Window
     {
-        private Dier _dier;
-        private List<Dier> _dierList;
-        private ListView _listViewDieren;
-        public DierInfoWindow(Dier dier, List<Dier> dierList, ListView listViewDieren)
+        private readonly Dier _dier;
+       
+        private readonly ListView _listViewDieren;
+        private readonly DierAsiel _dierAsiel;
+        public DierInfoWindow(Dier dier, DierAsiel asiel, ListView listViewDieren)
         {
             InitializeComponent();
             _dier = dier;
-            _dierList = dierList;
+          
+            _dierAsiel = asiel;
             _listViewDieren = listViewDieren;
             VulVelden();
         }
@@ -79,7 +81,7 @@ namespace Asiel
 
         private void VulView()
         {
-            foreach (var d in _dierList)
+            foreach (var d in _dierAsiel.DierList)
             {
                 _listViewDieren.Items.Add(d);
             }
