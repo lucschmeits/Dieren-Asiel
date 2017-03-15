@@ -57,6 +57,7 @@
     <Compile Include="BeheerWindow.xaml.cs">
       <DependentUpon>BeheerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DierAsiel.cs" />
     <Compile Include="DierInfoWindow.xaml.cs">
       <DependentUpon>DierInfoWindow.xaml</DependentUpon>
     </Compile>

@@ -20,23 +20,26 @@ namespace Asiel
     public partial class NieuwDierWindow : Window
     {
         private ListView _listViewDieren;
-        private List<Dier> _dierList;
+       // private List<Dier> _dierList;
+        private readonly DierAsiel _dierAsiel;
 
-        public NieuwDierWindow(ListView listViewDieren, List<Dier> dierList)
+        public NieuwDierWindow(ListView listViewDieren, DierAsiel dierAsiel)
         {
             InitializeComponent();
             VulComboBox();
             _listViewDieren = listViewDieren;
-            _dierList = dierList;
+           // _dierList = dierList;
+            _dierAsiel = dierAsiel;
         }
 
         private void btnOpslaan_Click(object sender, RoutedEventArgs e)
         {
             if ((String)CmbDierType.SelectedItem == "Hond")
             {
-                var h = new Hond();
+                
                 Dier.Geslacht geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
-                h.AddHond(TxtNaamDier.Text, geslacht, _dierList);
+                var h = new Hond(TxtNaamDier.Text, geslacht);
+                _dierAsiel.AddDog(h);
                 _listViewDieren.Items.Clear();
                 VulView();
                 this.Close();
@@ -44,9 +47,9 @@ namespace Asiel
             }
             if ((String)CmbDierType.SelectedItem == "Kat")
             {
-                var k = new Kat();
                 Dier.Geslacht geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
-                k.AddKat(TxtNaamDier.Text, geslacht, _dierList);
+                var k = new Kat(TxtNaamDier.Text, geslacht);
+                _dierAsiel.AddKat(k);
                 _listViewDieren.Items.Clear();
                 VulView();
                 this.Close();
@@ -84,7 +87,7 @@ namespace Asiel
         }
         private void VulView()
         {
-            foreach (Dier d in _dierList)
+            foreach (Dier d in _dierAsiel.DierList)
             {
                 _listViewDieren.Items.Add(d);
             }

@@ -20,7 +20,8 @@ namespace Asiel
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Dier> DierenList { get; set; } = new List<Dier>();
+        DierAsiel dierAsiel = new DierAsiel();
+       // private List<Dier> DierenList { get; set; } = new List<Dier>();
 
         public List<Reservering> ReserveringsList { get; set; } = new List<Reservering>();
 
@@ -33,7 +34,7 @@ namespace Asiel
 
         private void btnNieuwDier_Click(object sender, RoutedEventArgs e)
         {
-            var niewDier = new NieuwDierWindow(ListviewDier, DierenList);
+            var niewDier = new NieuwDierWindow(ListviewDier, dierAsiel);
             niewDier.Show();
         }
 
@@ -49,8 +50,8 @@ namespace Asiel
         {
             
             var d = (Dier) ListviewDier.SelectedItem;
-            var info = new DierInfoWindow(d, DierenList, ListviewDier);
-            info.Show();
+            //var info = new DierInfoWindow(d, DierenList, ListviewDier);
+           // info.Show();
         }
 
         private void btnNieuwPersoon_Click(object sender, RoutedEventArgs e)
