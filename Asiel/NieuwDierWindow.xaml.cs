@@ -34,10 +34,10 @@ namespace Asiel
 
         private void btnOpslaan_Click(object sender, RoutedEventArgs e)
         {
-            if ((String)CmbDierType.SelectedItem == "Hond")
+            if ((string)CmbDierType.SelectedItem == "Hond")
             {
                 
-                Dier.Geslacht geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
+                var geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
                 var h = new Hond(TxtNaamDier.Text, geslacht);
                 _dierAsiel.AddDog(h);
                 _listViewDieren.Items.Clear();
@@ -45,9 +45,9 @@ namespace Asiel
                 this.Close();
 
             }
-            if ((String)CmbDierType.SelectedItem == "Kat")
+            if ((string)CmbDierType.SelectedItem == "Kat")
             {
-                Dier.Geslacht geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
+                var geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
                 var k = new Kat(TxtNaamDier.Text, geslacht);
                 _dierAsiel.AddKat(k);
                 _listViewDieren.Items.Clear();
@@ -87,7 +87,7 @@ namespace Asiel
         }
         private void VulView()
         {
-            foreach (Dier d in _dierAsiel.DierList)
+            foreach (var d in _dierAsiel.DierList)
             {
                 _listViewDieren.Items.Add(d);
             }

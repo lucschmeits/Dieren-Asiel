@@ -19,7 +19,7 @@ namespace Asiel
     /// </summary>
     public partial class NieuwPersoonWindow : Window
     {
-       // private List<Persoon> _persoonList;
+      
         private readonly ListView _listViewPersonen;
         private readonly DierAsiel _dierAsiel;
         public NieuwPersoonWindow(DierAsiel dierAsiel, ListView listViewPersonen)

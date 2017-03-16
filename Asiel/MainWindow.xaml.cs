@@ -20,8 +20,7 @@ namespace Asiel
     /// </summary>
     public partial class MainWindow : Window
     {
-       private readonly DierAsiel _dierAsiel = new DierAsiel();
-      
+        private readonly DierAsiel _dierAsiel = new DierAsiel();
 
         public MainWindow()
         {
@@ -61,13 +60,14 @@ namespace Asiel
             var p = (Persoon) ListviewPersoon.SelectedItem;
             var info = new PersoonInfoWindow(p, ListviewPersoon, _dierAsiel);
             info.Show();
+          
         }
 
         private void BtnReserveer_Click(object sender, RoutedEventArgs e)
         {
             var d = (Dier) ListviewDier.SelectedItem;
             var p = (Persoon) ListviewPersoon.SelectedItem;
-           // var reservering = new Reservering();
+          
             try
             {
                 if (p == null || d == null || DatePickerReservering.DisplayDate == default(DateTime))
@@ -78,7 +78,7 @@ namespace Asiel
                 {
                     var r = new Reservering(p, d, DatePickerReservering.SelectedDate.Value);
                     _dierAsiel.AddReservering(r);
-                   // reservering.ReserveerDier(p, d, DatePickerReservering.SelectedDate.Value, ReserveringsList);
+                  
                 }
                
             }

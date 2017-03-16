@@ -37,8 +37,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <DatePicker x:Name="DatePickerReservering" HorizontalAlignment="Left" Margin="611,21,0,0" VerticalAlignment="Top" Width="225"/>
+        <DatePicker x:Name="DatePickerReservering" HorizontalAlignment="Left" Margin="611,63,0,0" VerticalAlignment="Top" Width="313"/>
         <Button x:Name="BtnReserveer" Content="Reserveer" HorizontalAlignment="Left" Margin="1041,223,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFF15748" Foreground="White" Click="BtnReserveer_Click"/>
+        <Label Content="Selecteer datum voor reservering" HorizontalAlignment="Left" Margin="611,21,0,0" VerticalAlignment="Top" Foreground="White"/>
 
     </Grid>
 </Window>

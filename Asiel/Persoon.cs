@@ -57,22 +57,7 @@ namespace Asiel
         }
 
 
-        //public void AddPersoon(string naamInput, string achternaamInput, string straatInput, string postcodeInput, string woonplaatsInput, string telefoonNrInput, List<Persoon> persoonList )
-        //{
-        //    Persoon persoon = new Persoon
-        //    {
-        //        naam = naamInput,
-        //        achternaam = achternaamInput,
-        //        straatHuisnr = straatInput,
-        //        postcode = postcodeInput,
-        //        woonplaats = woonplaatsInput,
-        //        telefoonNr = telefoonNrInput
-
-        //    };
-        //    persoonList.Add(persoon);
-        //}
-
-        public Persoon(string naam, string achternaam, string straat, string postcode, string woonplaats, string telefoon)
+      public Persoon(string naam, string achternaam, string straat, string postcode, string woonplaats, string telefoon)
         {
             _naam = naam;
             _achternaam = achternaam;

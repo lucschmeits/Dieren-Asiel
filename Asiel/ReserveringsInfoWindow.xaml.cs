@@ -19,7 +19,7 @@ namespace Asiel
     /// </summary>
     public partial class ReserveringsInfoWindow : Window
     {
-        private Reservering _reservering;
+        private readonly Reservering _reservering;
         public ReserveringsInfoWindow(Reservering reservering)
         {
             InitializeComponent();
@@ -57,14 +57,7 @@ namespace Asiel
         {
             cmbOpgehaald.Items.Add("Opgehaald");
             cmbOpgehaald.Items.Add("Niet opgehaald");
-            if (_reservering.isOpgehaald)
-            {
-                cmbOpgehaald.Text = "Opgehaald";
-            }
-            else
-            {
-                cmbOpgehaald.Text = "Niet opgehaald";
-            }
+            cmbOpgehaald.Text = _reservering.isOpgehaald ? "Opgehaald" : "Niet opgehaald";
            
         }
 

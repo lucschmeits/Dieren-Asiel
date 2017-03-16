@@ -10,12 +10,14 @@ namespace Asiel
     {
       // public List<Dier> DierList { get; private set; }
 
-        public List<Dier> DierList { get; private set; } = new List<Dier>();
+        public List<Dier> DierList { get; } = new List<Dier>();
 
-        public List<Persoon> PersoonList { get; private set; } = new List<Persoon>();
+        public List<Persoon> PersoonList { get; } = new List<Persoon>();
 
-        public List<Reservering> ReserveringsList { get; private set; } = new List<Reservering>();
-        
+        public List<Reservering> ReserveringsList { get; } = new List<Reservering>();
+
+      
+
         public void AddKat(Kat kat)
         {
             DierList.Add(kat);
@@ -34,6 +36,7 @@ namespace Asiel
         public void AddReservering(Reservering r)
         {
             ReserveringsList.Add(r);
+           
         }
     }
 }
