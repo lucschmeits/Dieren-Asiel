@@ -9,6 +9,13 @@ namespace UnitTestProjectAsiel
         [TestMethod]
         public void TestMethod1()
         {
+            
+        }
+
+        [TestMethod]
+        public void TestCat()
+        {
+            
         }
     }
 }
