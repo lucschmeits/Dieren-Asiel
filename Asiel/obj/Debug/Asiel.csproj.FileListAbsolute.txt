@@ -7,6 +7,7 @@ C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\MainWin
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\NieuwDierWindow.g.cs
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\NieuwPersoonWindow.g.cs
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\PersoonInfoWindow.g.cs
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\ReserveringsInfoWindow.g.cs
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\App.g.cs
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel_MarkupCompile.cache
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel_MarkupCompile.lref
@@ -16,11 +17,9 @@ C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\MainWin
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\NieuwDierWindow.baml
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\NieuwPersoonWindow.baml
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\PersoonInfoWindow.baml
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\ReserveringsInfoWindow.baml
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.g.resources
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.Properties.Resources.resources
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.csproj.GenerateResource.Cache
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.exe
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.pdb
-C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.csprojResolveAssemblyReference.cache
-C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\ReserveringsInfoWindow.g.cs
-C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\ReserveringsInfoWindow.baml

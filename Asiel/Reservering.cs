@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Asiel.Dieren;
 
 namespace Asiel
 {
@@ -43,10 +44,10 @@ namespace Asiel
         public List<Dier> Dierlist { get; private set; }
       
 
-        public Reservering(Persoon p, List<Dier> diers , DateTime datum)
+        public Reservering(Persoon p, Dier d , DateTime datum)
         {
             _persoon = p;
-            Dierlist = diers;
+            _dier = d;
             _reserveerDateTime = datum;
             
         }

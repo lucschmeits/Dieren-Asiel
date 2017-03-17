@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Asiel.Dieren;
 
 namespace Asiel
 {
@@ -43,10 +44,17 @@ namespace Asiel
 
         private void ListviewDier_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            
-            var d = (Dier) ListviewDier.SelectedItem;
-           var info = new DierInfoWindow(d, _dierAsiel, ListviewDier);
-            info.Show();
+            try
+            {
+                var dier = (Dier) ListviewDier.SelectedItem;
+                var info = new DierInfoWindow(dier, _dierAsiel, ListviewDier);
+                info.Show();
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Er is geen dier geselecteerd.");
+            }
+          
         }
 
         private void btnNieuwPersoon_Click(object sender, RoutedEventArgs e)
@@ -57,21 +65,29 @@ namespace Asiel
 
         private void ListviewPersoon_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var p = (Persoon) ListviewPersoon.SelectedItem;
-            var info = new PersoonInfoWindow(p, ListviewPersoon, _dierAsiel);
-            info.Show();
+            try
+            {
+                var p = (Persoon) ListviewPersoon.SelectedItem;
+                var info = new PersoonInfoWindow(p, ListviewPersoon, _dierAsiel);
+                info.Show();
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Er is geen persoon geselecteerd.");
+            }
+         
           
         }
 
         private void BtnReserveer_Click(object sender, RoutedEventArgs e)
         {
             
-            var d =  ListviewDier.SelectedItems;
+            var d =  (Dier)ListviewDier.SelectedItem;
             var p = (Persoon) ListviewPersoon.SelectedItem;
-            foreach (var s in ListviewDier.SelectedItems)
-            {
-                _dierAsiel.ReserveringDierlist.Add((Dier)s);
-            }
+            //foreach (var s in ListviewDier.SelectedItems)
+            //{
+            //    _dierAsiel.ReserveringDierlist.Add((Dier)s);
+            //}
             try
             {
                 if (p == null || d == null || DatePickerReservering.DisplayDate == default(DateTime))
@@ -80,7 +96,7 @@ namespace Asiel
                 }
                 else
                 {
-                    var r = new Reservering(p, _dierAsiel.ReserveringDierlist, DatePickerReservering.SelectedDate.Value);
+                    var r = new Reservering(p, d, DatePickerReservering.SelectedDate.Value);
                     _dierAsiel.AddReservering(r);
                   
                 }
@@ -88,7 +104,7 @@ namespace Asiel
             }
             catch (InvalidOperationException)
             {
-                MessageBox.Show("Er moet een dier, persoon en een datum geselecteerd zijn");
+                MessageBox.Show("Er moet een dier, persoon en een datum geselecteerd zijn.");
             }
           
             
@@ -98,9 +114,19 @@ namespace Asiel
 
         private void ListviewReservering_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var r = (Reservering) ListviewReservering.SelectedItem;
-            var reserveringsInfo = new ReserveringsInfoWindow(r);
-            reserveringsInfo.Show();
+            try
+            {
+                var r = (Reservering) ListviewReservering.SelectedItem;
+                var reserveringsInfo = new ReserveringsInfoWindow(r);
+                reserveringsInfo.Show();
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Er moet een reservering geselecteerd zijn.");
+            }
+          
         }
+
+    
     }
 }
