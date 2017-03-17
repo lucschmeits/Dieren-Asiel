@@ -10,8 +10,6 @@ namespace Asiel.Dieren
     {
         public DateTime LaatstUitgelaten { get; set; }
 
-     
-
         public Hond(string naam, Geslacht geslacht)
         {
             base.naam = naam;

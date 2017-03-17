@@ -23,3 +23,4 @@ C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.P
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.csproj.GenerateResource.Cache
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.exe
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.pdb
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.csprojResolveAssemblyReference.cache
