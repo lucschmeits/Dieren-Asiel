@@ -1,0 +1,15 @@
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\TestProjectAsiel.dll
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\TestProjectAsiel.pdb
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Asiel.exe
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Asiel.pdb
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Asiel.exe.config
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\obj\Debug\TestProjectAsiel.csprojResolveAssemblyReference.cache
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\obj\Debug\TestProjectAsiel.dll
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\TestProjectAsiel\obj\Debug\TestProjectAsiel.pdb

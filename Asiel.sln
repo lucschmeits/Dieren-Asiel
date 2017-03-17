@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asiel", "Asiel\Asiel.csproj", "{760DAA02-E927-45FC-B70C-24BE1B42E381}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectAsiel", "UnitTestProjectAsiel\UnitTestProjectAsiel.csproj", "{9DCADD24-BB9B-4457-98FB-23597453916E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectAsiel", "TestProjectAsiel\TestProjectAsiel.csproj", "{A427D43E-407C-4518-AF0D-6A610B7C4A82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{760DAA02-E927-45FC-B70C-24BE1B42E381}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{760DAA02-E927-45FC-B70C-24BE1B42E381}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{760DAA02-E927-45FC-B70C-24BE1B42E381}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DCADD24-BB9B-4457-98FB-23597453916E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DCADD24-BB9B-4457-98FB-23597453916E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DCADD24-BB9B-4457-98FB-23597453916E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DCADD24-BB9B-4457-98FB-23597453916E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A427D43E-407C-4518-AF0D-6A610B7C4A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A427D43E-407C-4518-AF0D-6A610B7C4A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A427D43E-407C-4518-AF0D-6A610B7C4A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A427D43E-407C-4518-AF0D-6A610B7C4A82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

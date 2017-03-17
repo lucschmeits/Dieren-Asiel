@@ -7,15 +7,14 @@ namespace UnitTestProjectAsiel
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
-        {
-            
-        }
+       
+            public void TestInitialize() { this.cat = new Cat("Ms. Meow", Gender.Female, "Scratches couch"); }
+       
 
         [TestMethod]
-        public void TestCat()
+        public void TestCatConstructor()
         {
-            
+            Assert.AreEqual();
         }
     }
 }
