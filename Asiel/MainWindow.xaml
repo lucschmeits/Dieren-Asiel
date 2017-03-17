@@ -16,7 +16,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="ListviewDier" HorizontalAlignment="Left" Height="185" Margin="22,249,0,0" VerticalAlignment="Top" Width="538" MouseDoubleClick="ListviewDier_MouseDoubleClick" >
+        <ListView x:Name="ListviewDier" HorizontalAlignment="Left" Height="185" Margin="22,249,0,0" VerticalAlignment="Top" Width="538" MouseDoubleClick="ListviewDier_MouseDoubleClick" SelectionMode="Multiple" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Naam" Width="170" DisplayMemberBinding="{Binding naam}"/>

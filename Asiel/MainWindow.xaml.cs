@@ -65,9 +65,13 @@ namespace Asiel
 
         private void BtnReserveer_Click(object sender, RoutedEventArgs e)
         {
-            var d = (Dier) ListviewDier.SelectedItem;
+            
+            var d =  ListviewDier.SelectedItems;
             var p = (Persoon) ListviewPersoon.SelectedItem;
-          
+            foreach (var s in ListviewDier.SelectedItems)
+            {
+                _dierAsiel.ReserveringDierlist.Add((Dier)s);
+            }
             try
             {
                 if (p == null || d == null || DatePickerReservering.DisplayDate == default(DateTime))
@@ -76,7 +80,7 @@ namespace Asiel
                 }
                 else
                 {
-                    var r = new Reservering(p, d, DatePickerReservering.SelectedDate.Value);
+                    var r = new Reservering(p, _dierAsiel.ReserveringDierlist, DatePickerReservering.SelectedDate.Value);
                     _dierAsiel.AddReservering(r);
                   
                 }

@@ -17,7 +17,7 @@ namespace Asiel
 
         public List<Reservering> ReserveringsList { get; } = new List<Reservering>();
 
-      
+        public List<Dier> ReserveringDierlist { get; } = new List<Dier>();
 
         public void AddKat(Kat kat)
         {
@@ -38,6 +38,11 @@ namespace Asiel
         {
             ReserveringsList.Add(r);
            
+        }
+
+        public void AddDierToReserveringsList()
+        {
+            
         }
     }
 }

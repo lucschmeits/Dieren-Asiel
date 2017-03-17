@@ -40,23 +40,15 @@ namespace Asiel
             set { _dier = value; }
         }
 
+        public List<Dier> Dierlist { get; private set; }
+      
 
-        //public void ReserveerDier(Persoon p, Dier d, DateTime datum, List<Reservering> reserveringsList)
-        //{
-        //    Reservering r = new Reservering
-        //    {
-        //        _persoon = p,
-        //        _dier = d,
-        //        _reserveerDateTime = datum
-        //    };
-        //    reserveringsList.Add(r);
-        //}
-
-        public Reservering(Persoon p, Dier d, DateTime datum)
+        public Reservering(Persoon p, List<Dier> diers , DateTime datum)
         {
             _persoon = p;
-            _dier = d;
+            Dierlist = diers;
             _reserveerDateTime = datum;
+            
         }
     }
 }
