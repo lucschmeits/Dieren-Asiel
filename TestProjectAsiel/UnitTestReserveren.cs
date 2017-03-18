@@ -22,7 +22,7 @@ namespace TestProjectAsiel
         }
 
         [TestMethod]
-        public void TestReserveringConstructorHond()
+        public void TestReserveringHond()
         {
             Assert.AreEqual("Kees", reservering.persoon.naam);
             Assert.IsNotNull(reservering.dier);
@@ -32,7 +32,7 @@ namespace TestProjectAsiel
         }
 
         [TestMethod]
-        public void TestReserveringContructorCat()
+        public void TestReserveringCat()
         {
             this.reservering = new Reservering(new Persoon("Kees", "Achternaam", "Stategaard 43", "6227 GL", "Maastricht", "0612345678"), new Kat("Katje", Dier.Geslacht.Vrouw), DateTime.Today );
             Assert.IsNotNull(reservering.persoon);

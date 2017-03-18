@@ -117,7 +117,7 @@ namespace Asiel
             try
             {
                 var r = (Reservering) ListviewReservering.SelectedItem;
-                var reserveringsInfo = new ReserveringsInfoWindow(r);
+                var reserveringsInfo = new ReserveringsInfoWindow(r, _dierAsiel, ListviewReservering);
                 reserveringsInfo.Show();
             }
             catch (NullReferenceException)

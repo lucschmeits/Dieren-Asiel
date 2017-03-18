@@ -21,10 +21,14 @@ namespace Asiel
     public partial class ReserveringsInfoWindow : Window
     {
         private readonly Reservering _reservering;
-        public ReserveringsInfoWindow(Reservering reservering)
+        private readonly DierAsiel _dierAsiel;
+        private readonly ListView _listViewReservering;
+        public ReserveringsInfoWindow(Reservering reservering, DierAsiel dierAsiel, ListView listViewReservering)
         {
             InitializeComponent();
             _reservering = reservering;
+            _dierAsiel = dierAsiel;
+            _listViewReservering = listViewReservering;
             VulVelden();
             VulComboBox();
         }
@@ -72,6 +76,16 @@ namespace Asiel
             else
             {
                 _reservering.isOpgehaald = false;
+            }
+            if (_reservering.isOpgehaald)
+            {
+                _dierAsiel.ReserveringsList.Remove(_reservering);
+                _listViewReservering.Items.Clear();
+                foreach (var r in _dierAsiel.ReserveringsList)
+                {
+                    _listViewReservering.Items.Add(r);
+                }
+               
             }
             this.Close();
         }
