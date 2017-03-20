@@ -9,7 +9,7 @@ namespace Asiel
 {
    public class DierAsiel
     {
-      // public List<Dier> DierList { get; private set; }
+      
 
         public List<Dier> DierList { get; } = new List<Dier>();
 
@@ -17,8 +17,9 @@ namespace Asiel
 
         public List<Reservering> ReserveringsList { get; } = new List<Reservering>();
 
-        public List<Dier> ReserveringDierlist { get; } = new List<Dier>();
+       // public List<Dier> ReserveringDierlist { get; } = new List<Dier>();
 
+        public List<Webshop> WebshopList { get; } = new List<Webshop>();
         public void AddKat(Kat kat)
         {
             DierList.Add(kat);

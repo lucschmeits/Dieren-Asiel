@@ -54,34 +54,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BeheerWindow.xaml.cs">
+    <Compile Include="Windows\BeheerWindow.xaml.cs">
       <DependentUpon>BeheerWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DierAsiel.cs" />
-    <Compile Include="DierInfoWindow.xaml.cs">
+    <Compile Include="Windows\DierInfoWindow.xaml.cs">
       <DependentUpon>DierInfoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dieren\Hond.cs" />
     <Compile Include="Dieren\Kat.cs" />
-    <Compile Include="NieuwDierWindow.xaml.cs">
+    <Compile Include="Interfaces\ISellable.cs" />
+    <Compile Include="Windows\NieuwDierWindow.xaml.cs">
       <DependentUpon>NieuwDierWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NieuwPersoonWindow.xaml.cs">
+    <Compile Include="Windows\NieuwPersoonWindow.xaml.cs">
       <DependentUpon>NieuwPersoonWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Persoon.cs" />
-    <Compile Include="PersoonInfoWindow.xaml.cs">
+    <Compile Include="Windows\PersoonInfoWindow.xaml.cs">
       <DependentUpon>PersoonInfoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reservering.cs" />
-    <Compile Include="ReserveringsInfoWindow.xaml.cs">
+    <Compile Include="Windows\ReserveringsInfoWindow.xaml.cs">
       <DependentUpon>ReserveringsInfoWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="BeheerWindow.xaml">
+    <Page Include="Windows\BeheerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DierInfoWindow.xaml">
+    <Page Include="Windows\DierInfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,19 +99,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NieuwDierWindow.xaml">
+    <Page Include="Windows\NieuwDierWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NieuwPersoonWindow.xaml">
+    <Page Include="Windows\NieuwPersoonWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PersoonInfoWindow.xaml">
+    <Page Include="Windows\PersoonInfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ReserveringsInfoWindow.xaml">
+    <Page Include="Windows\ReserveringsInfoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
