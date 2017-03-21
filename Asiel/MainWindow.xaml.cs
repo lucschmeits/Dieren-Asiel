@@ -115,6 +115,9 @@ namespace Asiel
           
         }
 
-    
+        private void BtnWinkel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

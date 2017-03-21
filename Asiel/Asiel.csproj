@@ -79,6 +79,9 @@
     <Compile Include="Windows\ReserveringsInfoWindow.xaml.cs">
       <DependentUpon>ReserveringsInfoWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\WinkelHomeWindow.xaml.cs">
+      <DependentUpon>WinkelHomeWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="Windows\BeheerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ReserveringsInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WinkelHomeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -25,7 +25,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="btnBeheer" Content="Beheer" HorizontalAlignment="Left" Margin="1041,21,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FF51A060" Foreground="White"/>
+        <Button x:Name="BtnWinkel" Content="Winkel" HorizontalAlignment="Left" Margin="1041,21,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FF51A060" Foreground="White" Click="BtnWinkel_Click"/>
         <Button x:Name="btnNieuwDier" Content="Nieuw Dier" HorizontalAlignment="Left" Margin="1041,90,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFFF9B6D" Foreground="White" Click="btnNieuwDier_Click"/>
         <Button x:Name="btnNieuwPersoon" Content="Nieuw Persoon" HorizontalAlignment="Left" Margin="1041,158,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFEAFD89" Foreground="#FF817171" Click="btnNieuwPersoon_Click"/>
         <ListView x:Name="ListviewPersoon" HorizontalAlignment="Left" Height="185" Margin="611,249,0,0" VerticalAlignment="Top" Width="422" MouseDoubleClick="ListviewPersoon_MouseDoubleClick">
