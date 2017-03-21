@@ -18,9 +18,9 @@ namespace Asiel.Dieren
 
         public void BerekenPrijs()
         {
-            base.Price = 350;
             if (String.IsNullOrEmpty(Info))
             {
+                base.Price = 350;
             }
             else
             {
