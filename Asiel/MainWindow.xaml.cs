@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Input;
 using Asiel.Dieren;
+using Asiel.Windows;
+
 namespace Asiel
 {
     /// <summary>
@@ -117,7 +119,8 @@ namespace Asiel
 
         private void BtnWinkel_Click(object sender, RoutedEventArgs e)
         {
-
+            var winkelHome = new WinkelHomeWindow(_dierAsiel);
+            winkelHome.Show();
         }
     }
 }

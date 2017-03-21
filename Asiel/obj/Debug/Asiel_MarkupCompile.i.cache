@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\App.xaml
-81383040225
+91887539170
 
-24-1112631662
+25-1212336068
 13738642453
-Windows\BeheerWindow.xaml;Windows\DierInfoWindow.xaml;MainWindow.xaml;Windows\NieuwDierWindow.xaml;Windows\NieuwPersoonWindow.xaml;Windows\PersoonInfoWindow.xaml;Windows\ReserveringsInfoWindow.xaml;Windows\WinkelHomeWindow.xaml;
+Windows\BeheerWindow.xaml;Windows\DierInfoWindow.xaml;MainWindow.xaml;Windows\NieuwDierWindow.xaml;Windows\NieuwPersoonWindow.xaml;Windows\PersoonInfoWindow.xaml;Windows\ReserveringsInfoWindow.xaml;Windows\WinkelHomeWindow.xaml;Windows\WinkelNieuwProductWindow.xaml;
 
 False
 

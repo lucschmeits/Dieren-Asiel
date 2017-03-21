@@ -82,6 +82,9 @@
     <Compile Include="Windows\WinkelHomeWindow.xaml.cs">
       <DependentUpon>WinkelHomeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\WinkelNieuwProductWindow.xaml.cs">
+      <DependentUpon>WinkelNieuwProductWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="Windows\BeheerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\WinkelHomeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WinkelNieuwProductWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

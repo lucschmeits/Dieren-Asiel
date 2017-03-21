@@ -19,9 +19,27 @@ namespace Asiel.Windows
     /// </summary>
     public partial class WinkelHomeWindow : Window
     {
-        public WinkelHomeWindow()
+        private DierAsiel _dierAsiel;
+        public WinkelHomeWindow(DierAsiel dierAsiel)
         {
             InitializeComponent();
+            _dierAsiel = dierAsiel;
+            AddProduct();
+        }
+
+        private void BtnNieuwProduct_Click(object sender, RoutedEventArgs e)
+        {
+            var winkelNieuwProduct = new WinkelNieuwProductWindow(_dierAsiel, ListViewProducten);
+            winkelNieuwProduct.Show();
+        }
+
+        private void AddProduct()
+        {
+            ListViewProducten.Items.Clear();
+            foreach (var p in _dierAsiel.WebshopList)
+            {
+                ListViewProducten.Items.Add(p);
+            }
         }
     }
 }

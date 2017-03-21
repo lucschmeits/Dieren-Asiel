@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="Winkel" Height="391.079" Width="694.521" Background="#FF5F5C3B">
     <Grid>
-        <ListView HorizontalAlignment="Left" Height="291" Margin="10,46,0,0" VerticalAlignment="Top" Width="301">
+        <ListView x:Name="ListViewProducten" HorizontalAlignment="Left" Height="291" Margin="10,46,0,0" VerticalAlignment="Top" Width="310">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Naam" Width="150" DisplayMemberBinding="{Binding Naam}"/>
-                    <GridViewColumn Header="Prijs" Width="150" DisplayMemberBinding="{Binding Prijs}"/>
+                    <GridViewColumn Header="Prijs" Width="150" DisplayMemberBinding="{Binding Price}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Label Content="Producten:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="BtnNieuwProduct" Content="Nieuw Product" HorizontalAlignment="Left" Margin="429,46,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFFF9B6D" Foreground="White"/>
+        <Button x:Name="BtnNieuwProduct" Content="Nieuw Product" HorizontalAlignment="Left" Margin="429,46,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFFF9B6D" Foreground="White" Click="BtnNieuwProduct_Click"/>
 
     </Grid>
 </Window>

@@ -41,6 +41,11 @@ namespace Asiel
            
         }
 
+        public void AddProduct(Webshop product)
+        {
+            WebshopList.Add(product);
+        }
+
         public void AddDierToReserveringsList()
         {
             

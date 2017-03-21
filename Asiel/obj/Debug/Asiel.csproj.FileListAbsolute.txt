@@ -24,3 +24,7 @@ C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\NieuwPersoonWindow.baml
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\PersoonInfoWindow.baml
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\ReserveringsInfoWindow.baml
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\WinkelHomeWindow.baml
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\WinkelHomeWindow.g.cs
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\WinkelNieuwProductWindow.g.cs
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\WinkelNieuwProductWindow.baml
