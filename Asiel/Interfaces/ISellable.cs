@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Asiel
 {
-    interface ISellable
+    internal interface ISellable
     {
-         string Naam { get; set; }
-         decimal Price { get; set; }
+        string Naam { get; set; }
+        decimal Price { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asiel
 {
-   public class Persoon
+    public class Persoon
     {
         private string _naam;
 
@@ -56,8 +56,7 @@ namespace Asiel
             set { _telefoonNr = value; }
         }
 
-
-      public Persoon(string naam, string achternaam, string straat, string postcode, string woonplaats, string telefoon)
+        public Persoon(string naam, string achternaam, string straat, string postcode, string woonplaats, string telefoon)
         {
             _naam = naam;
             _achternaam = achternaam;

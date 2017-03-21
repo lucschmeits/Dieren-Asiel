@@ -10,8 +10,6 @@ namespace Asiel.Dieren
     {
         public string Info { get; set; }
 
-      
-
         public Kat(string naam, Geslacht geslacht)
         {
             base.naam = naam;

@@ -7,19 +7,18 @@ using Asiel.Dieren;
 
 namespace Asiel
 {
-   public class DierAsiel
+    public class DierAsiel
     {
-      
-
         public List<Dier> DierList { get; } = new List<Dier>();
 
         public List<Persoon> PersoonList { get; } = new List<Persoon>();
 
         public List<Reservering> ReserveringsList { get; } = new List<Reservering>();
 
-       // public List<Dier> ReserveringDierlist { get; } = new List<Dier>();
+        // public List<Dier> ReserveringDierlist { get; } = new List<Dier>();
 
         public List<Webshop> WebshopList { get; } = new List<Webshop>();
+
         public void AddKat(Kat kat)
         {
             DierList.Add(kat);
@@ -38,7 +37,6 @@ namespace Asiel
         public void AddReservering(Reservering r)
         {
             ReserveringsList.Add(r);
-           
         }
 
         public void AddProduct(Webshop product)
@@ -48,7 +46,6 @@ namespace Asiel
 
         public void AddDierToReserveringsList()
         {
-            
         }
     }
 }

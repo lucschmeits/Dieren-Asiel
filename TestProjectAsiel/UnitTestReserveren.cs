@@ -11,6 +11,7 @@ namespace TestProjectAsiel
         private Reservering reservering;
         private Persoon persoon;
         private Dier dier;
+
         [TestInitialize]
         public void TestMethod1()
         {
@@ -18,7 +19,6 @@ namespace TestProjectAsiel
             this.dier = new Hond("Hondje", Dier.Geslacht.Man);
             this.reservering = new Reservering(persoon, dier, DateTime.Today);
             this.reservering.isOpgehaald = true;
-
         }
 
         [TestMethod]
@@ -34,7 +34,7 @@ namespace TestProjectAsiel
         [TestMethod]
         public void TestReserveringCat()
         {
-            this.reservering = new Reservering(new Persoon("Kees", "Achternaam", "Stategaard 43", "6227 GL", "Maastricht", "0612345678"), new Kat("Katje", Dier.Geslacht.Vrouw), DateTime.Today );
+            this.reservering = new Reservering(new Persoon("Kees", "Achternaam", "Stategaard 43", "6227 GL", "Maastricht", "0612345678"), new Kat("Katje", Dier.Geslacht.Vrouw), DateTime.Today);
             Assert.IsNotNull(reservering.persoon);
             Assert.IsFalse(reservering.isOpgehaald);
             Assert.AreEqual("Katje", reservering.dier.naam);

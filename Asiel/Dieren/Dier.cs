@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Asiel.Dieren
 {
-  public abstract class Dier : ISellable
+    public abstract class Dier : ISellable
     {
-       
         public enum Geslacht
         {
             Man,

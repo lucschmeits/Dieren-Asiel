@@ -2,12 +2,14 @@
 using Asiel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Asiel.Dieren;
+
 namespace TestProjectAsiel
 {
     [TestClass]
     public class UnitTestHond
     {
         private Hond hond;
+
         [TestInitialize]
         public void TestMethod1()
         {

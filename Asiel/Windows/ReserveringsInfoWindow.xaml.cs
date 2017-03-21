@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Asiel.Dieren;
 
-
 namespace Asiel
 {
     /// <summary>
@@ -24,6 +23,7 @@ namespace Asiel
         private readonly Reservering _reservering;
         private readonly DierAsiel _dierAsiel;
         private readonly ListView _listViewReservering;
+
         public ReserveringsInfoWindow(Reservering reservering, DierAsiel dierAsiel, ListView listViewReservering)
         {
             InitializeComponent();
@@ -48,15 +48,14 @@ namespace Asiel
             TxtDierType.Text = _reservering.dier.GetType().Name;
             if (_reservering.dier.GetType() == typeof(Hond))
             {
-                var h = (Hond) _reservering.dier;
+                var h = (Hond)_reservering.dier;
                 TxtUitgelaten.Text = h.LaatstUitgelaten.ToShortDateString();
             }
             if (_reservering.dier.GetType() == typeof(Kat))
             {
-                var k = (Kat) _reservering.dier;
+                var k = (Kat)_reservering.dier;
                 TxtInfo.Text = k.Info;
             }
-            
         }
 
         private void VulComboBox()
@@ -64,7 +63,6 @@ namespace Asiel
             cmbOpgehaald.Items.Add("Opgehaald");
             cmbOpgehaald.Items.Add("Niet opgehaald");
             cmbOpgehaald.Text = _reservering.isOpgehaald ? "Opgehaald" : "Niet opgehaald";
-           
         }
 
         private void BtnAanpassen_Click(object sender, RoutedEventArgs e)
@@ -72,7 +70,6 @@ namespace Asiel
             if (cmbOpgehaald.SelectedItem.ToString() == "Opgehaald")
             {
                 _reservering.isOpgehaald = true;
-                
             }
             else
             {
@@ -86,7 +83,6 @@ namespace Asiel
                 {
                     _listViewReservering.Items.Add(r);
                 }
-               
             }
             this.Close();
         }

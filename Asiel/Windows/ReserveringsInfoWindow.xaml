@@ -8,33 +8,32 @@
         Title="Dieren asiel - Reservering" Height="483.476" Width="719.691" Background="#FF5F5C3B" FontFamily="Global Sans Serif" FontSize="16">
     <Grid>
 
-        <Label Content="Persoon" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" Height="29" Width="70"/>
-        <Label Content="Dier" HorizontalAlignment="Left" Margin="371,10,0,0" VerticalAlignment="Top" Foreground="White" Height="29" Width="39"/>
-        <TextBox x:Name="TxtNaamPersoon" HorizontalAlignment="Left" Height="23" Margin="10,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtAchternaam" HorizontalAlignment="Left" Height="23" Margin="10,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtWoonplaats" HorizontalAlignment="Left" Height="23" Margin="10,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtPostcode" HorizontalAlignment="Left" Height="23" Margin="10,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtStraat" HorizontalAlignment="Left" Height="23" Margin="10,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtTelefoon" HorizontalAlignment="Left" Height="23" Margin="10,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtDierNaam" HorizontalAlignment="Left" Height="23" Margin="371,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtInfo" HorizontalAlignment="Left" Height="23" Margin="371,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtUitgelaten" HorizontalAlignment="Left" Height="23" Margin="371,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtDierType" HorizontalAlignment="Left" Height="23" Margin="371,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <TextBox x:Name="TxtDierGeslacht" HorizontalAlignment="Left" Height="23" Margin="371,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
-        <Button x:Name="BtnAanpassen" Content="Aanpassen" HorizontalAlignment="Left" Margin="371,346,0,0" VerticalAlignment="Top" Width="294" Height="40" Foreground="White" Background="#FF51A060" Click="BtnAanpassen_Click"/>
-        <ComboBox x:Name="cmbOpgehaald" HorizontalAlignment="Left" Margin="371,310,0,0" VerticalAlignment="Top" Width="150"/>
-        <Label Content="Naam" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Achternaam" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Woonplaats" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Postcode" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Straat" HorizontalAlignment="Left" Margin="10,241,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Telefoon" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Naam" HorizontalAlignment="Left" Margin="370,40,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Geslacht" HorizontalAlignment="Left" Margin="370,97,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Type" HorizontalAlignment="Left" Margin="370,143,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Laatst uitgelaten" HorizontalAlignment="Left" Margin="370,193,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Info" HorizontalAlignment="Left" Margin="370,241,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Opgehaald" HorizontalAlignment="Left" Margin="370,287,0,0" VerticalAlignment="Top" Foreground="White"/>
-
+        <Label Content="Persoon" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" Height="29" Width="70" />
+        <Label Content="Dier" HorizontalAlignment="Left" Margin="371,10,0,0" VerticalAlignment="Top" Foreground="White" Height="29" Width="39" />
+        <TextBox x:Name="TxtNaamPersoon" HorizontalAlignment="Left" Height="23" Margin="10,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtAchternaam" HorizontalAlignment="Left" Height="23" Margin="10,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtWoonplaats" HorizontalAlignment="Left" Height="23" Margin="10,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtPostcode" HorizontalAlignment="Left" Height="23" Margin="10,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtStraat" HorizontalAlignment="Left" Height="23" Margin="10,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtTelefoon" HorizontalAlignment="Left" Height="23" Margin="10,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtDierNaam" HorizontalAlignment="Left" Height="23" Margin="371,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtInfo" HorizontalAlignment="Left" Height="23" Margin="371,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtUitgelaten" HorizontalAlignment="Left" Height="23" Margin="371,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtDierType" HorizontalAlignment="Left" Height="23" Margin="371,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <TextBox x:Name="TxtDierGeslacht" HorizontalAlignment="Left" Height="23" Margin="371,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" />
+        <Button x:Name="BtnAanpassen" Content="Aanpassen" HorizontalAlignment="Left" Margin="371,346,0,0" VerticalAlignment="Top" Width="294" Height="40" Foreground="White" Background="#FF51A060" Click="BtnAanpassen_Click" />
+        <ComboBox x:Name="cmbOpgehaald" HorizontalAlignment="Left" Margin="371,310,0,0" VerticalAlignment="Top" Width="150" />
+        <Label Content="Naam" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Achternaam" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Woonplaats" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Postcode" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Straat" HorizontalAlignment="Left" Margin="10,241,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Telefoon" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Naam" HorizontalAlignment="Left" Margin="370,40,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Geslacht" HorizontalAlignment="Left" Margin="370,97,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Type" HorizontalAlignment="Left" Margin="370,143,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Laatst uitgelaten" HorizontalAlignment="Left" Margin="370,193,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Info" HorizontalAlignment="Left" Margin="370,241,0,0" VerticalAlignment="Top" Foreground="White" />
+        <Label Content="Opgehaald" HorizontalAlignment="Left" Margin="370,287,0,0" VerticalAlignment="Top" Foreground="White" />
     </Grid>
 </Window>

@@ -19,13 +19,13 @@ namespace Asiel
     /// </summary>
     public partial class NieuwPersoonWindow : Window
     {
-      
         private readonly ListView _listViewPersonen;
         private readonly DierAsiel _dierAsiel;
+
         public NieuwPersoonWindow(DierAsiel dierAsiel, ListView listViewPersonen)
         {
             InitializeComponent();
-            
+
             _dierAsiel = dierAsiel;
             _listViewPersonen = listViewPersonen;
         }
@@ -34,9 +34,9 @@ namespace Asiel
         {
             var p = new Persoon(TxtNaam.Text, TxtAchternaam.Text, TxtStraatHuisNr.Text, TxtPostcode.Text, TxtWoonplaats.Text, TxtTelefoon.Text);
             _dierAsiel.AddPersoon(p);
-          
+
             _listViewPersonen.Items.Clear();
-            
+
             VulView();
             this.Close();
         }

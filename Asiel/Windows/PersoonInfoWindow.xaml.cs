@@ -21,14 +21,15 @@ namespace Asiel
     {
         private readonly Persoon _p;
         private readonly ListView _listViewPersoon;
-     
+
         private readonly DierAsiel _asiel;
-        public PersoonInfoWindow(Persoon p, ListView listViewPersoon, DierAsiel asiel )
+
+        public PersoonInfoWindow(Persoon p, ListView listViewPersoon, DierAsiel asiel)
         {
             InitializeComponent();
             _p = p;
             _listViewPersoon = listViewPersoon;
-         
+
             _asiel = asiel;
             VulVelden();
         }

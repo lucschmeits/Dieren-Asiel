@@ -21,14 +21,15 @@ namespace Asiel
     public partial class DierInfoWindow : Window
     {
         private readonly Dier _dier;
-       
+
         private readonly ListView _listViewDieren;
         private readonly DierAsiel _dierAsiel;
+
         public DierInfoWindow(Dier dier, DierAsiel asiel, ListView listViewDieren)
         {
             InitializeComponent();
             _dier = dier;
-          
+
             _dierAsiel = asiel;
             _listViewDieren = listViewDieren;
             VulVelden();
@@ -39,13 +40,13 @@ namespace Asiel
             TxtNaam.Text = _dier.naam;
             TxtGeslacht.Text = _dier.GeslachtSet.ToString();
             TxtDierType.Text = _dier.GetType().Name;
+            TbPrijs.Text = _dier.Price.ToString();
             if (_dier.GetType() == typeof(Hond))
             {
                 var h = (Hond)_dier;
                 TxtInfo.Visibility = Visibility.Hidden;
                 if (h.LaatstUitgelaten == default(DateTime))
                 {
-
                 }
                 else
                 {
@@ -65,7 +66,7 @@ namespace Asiel
             if (_dier.GetType() == typeof(Hond))
             {
                 var h = (Hond)_dier;
-                
+
                 h.naam = TxtNaam.Text;
                 h.LaatstUitgelaten = (DateTime)DateUitgelaten.SelectedDate;
             }
@@ -77,7 +78,6 @@ namespace Asiel
             _listViewDieren.Items.Clear();
             VulView();
             this.Close();
-
         }
 
         private void VulView()
@@ -89,5 +89,3 @@ namespace Asiel
         }
     }
 }
-
-

@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:Asiel"
         mc:Ignorable="d"
         Title="Dieren asiel - beheer" Height="516.61" Width="1003.253" Background="#FF5F5C3B" FontFamily="Global Sans Serif" FontSize="16">
-    <Grid/>
+    <Grid />
 </Window>

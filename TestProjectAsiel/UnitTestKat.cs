@@ -9,11 +9,12 @@ namespace TestProjectAsiel
     public class UnitTestKat
     {
         private Kat kat;
+
         [TestInitialize]
         public void TestMethod1()
         {
             this.kat = new Kat("katje", Dier.Geslacht.Man);
-           // kat.Info = "Hallo";
+            // kat.Info = "Hallo";
         }
 
         [TestMethod]

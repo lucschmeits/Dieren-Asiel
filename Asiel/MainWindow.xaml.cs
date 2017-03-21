@@ -26,7 +26,7 @@ namespace Asiel
 
         private void VulView()
         {
-           foreach (var r in _dierAsiel.ReserveringsList)
+            foreach (var r in _dierAsiel.ReserveringsList)
             {
                 ListviewReservering.Items.Add(r);
             }
@@ -36,7 +36,7 @@ namespace Asiel
         {
             try
             {
-                var dier = (Dier) ListviewDier.SelectedItem;
+                var dier = (Dier)ListviewDier.SelectedItem;
                 var info = new DierInfoWindow(dier, _dierAsiel, ListviewDier);
                 info.Show();
             }
@@ -44,7 +44,6 @@ namespace Asiel
             {
                 MessageBox.Show("Er is geen dier geselecteerd.");
             }
-          
         }
 
         private void btnNieuwPersoon_Click(object sender, RoutedEventArgs e)
@@ -57,7 +56,7 @@ namespace Asiel
         {
             try
             {
-                var p = (Persoon) ListviewPersoon.SelectedItem;
+                var p = (Persoon)ListviewPersoon.SelectedItem;
                 var info = new PersoonInfoWindow(p, ListviewPersoon, _dierAsiel);
                 info.Show();
             }
@@ -65,15 +64,12 @@ namespace Asiel
             {
                 MessageBox.Show("Er is geen persoon geselecteerd.");
             }
-         
-          
         }
 
         private void BtnReserveer_Click(object sender, RoutedEventArgs e)
         {
-            
-            var d =  (Dier)ListviewDier.SelectedItem;
-            var p = (Persoon) ListviewPersoon.SelectedItem;
+            var d = (Dier)ListviewDier.SelectedItem;
+            var p = (Persoon)ListviewPersoon.SelectedItem;
             //foreach (var s in ListviewDier.SelectedItems)
             //{
             //    _dierAsiel.ReserveringDierlist.Add((Dier)s);
@@ -88,16 +84,13 @@ namespace Asiel
                 {
                     var r = new Reservering(p, d, DatePickerReservering.SelectedDate.Value);
                     _dierAsiel.AddReservering(r);
-                  
                 }
-               
             }
             catch (InvalidOperationException)
             {
                 MessageBox.Show("Er moet een dier, persoon en een datum geselecteerd zijn.");
             }
-          
-            
+
             ListviewReservering.Items.Clear();
             VulView();
         }
@@ -106,7 +99,7 @@ namespace Asiel
         {
             try
             {
-                var r = (Reservering) ListviewReservering.SelectedItem;
+                var r = (Reservering)ListviewReservering.SelectedItem;
                 var reserveringsInfo = new ReserveringsInfoWindow(r, _dierAsiel, ListviewReservering);
                 reserveringsInfo.Show();
             }
@@ -114,7 +107,6 @@ namespace Asiel
             {
                 MessageBox.Show("Er moet een reservering geselecteerd zijn.");
             }
-          
         }
 
         private void BtnWinkel_Click(object sender, RoutedEventArgs e)

@@ -21,7 +21,7 @@ namespace Asiel
     public partial class NieuwDierWindow : Window
     {
         private readonly ListView _listViewDieren;
-      
+
         private readonly DierAsiel _dierAsiel;
 
         public NieuwDierWindow(ListView listViewDieren, DierAsiel dierAsiel)
@@ -29,7 +29,7 @@ namespace Asiel
             InitializeComponent();
             VulComboBox();
             _listViewDieren = listViewDieren;
-          
+
             _dierAsiel = dierAsiel;
         }
 
@@ -37,14 +37,14 @@ namespace Asiel
         {
             if ((string)CmbDierType.SelectedItem == "Hond")
             {
-                
                 var geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
                 var h = new Hond(TxtNaamDier.Text, geslacht);
+
                 _dierAsiel.AddDog(h);
                 _listViewDieren.Items.Clear();
                 VulView();
+                h.BerekenPrijs(_dierAsiel.DierList);
                 this.Close();
-
             }
             if ((string)CmbDierType.SelectedItem == "Kat")
             {
@@ -62,6 +62,7 @@ namespace Asiel
             CmbDierType.ItemsSource = DierList();
             CmbGeslacht.ItemsSource = GeslachtList();
         }
+
         private List<Enum> GeslachtList()
         {
             List<Enum> GeslachtList = new List<Enum>();
@@ -86,6 +87,7 @@ namespace Asiel
             }
             return dierList;
         }
+
         private void VulView()
         {
             foreach (var d in _dierAsiel.DierList)

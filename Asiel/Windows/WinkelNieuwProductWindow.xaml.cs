@@ -21,6 +21,7 @@ namespace Asiel.Windows
     {
         private DierAsiel _dierAsiel;
         private ListView _listViewProducten;
+
         public WinkelNieuwProductWindow(DierAsiel dierAsiel, ListView listViewProducten)
         {
             InitializeComponent();
@@ -30,12 +31,11 @@ namespace Asiel.Windows
 
         private void BtnProductToevoegen_Click(object sender, RoutedEventArgs e)
         {
-           
             var x = TbPrijs.Text;
             var replace = x.Replace('.', ',');
             var d = decimal.Parse(replace);
             var product = new Webshop(TbNaam.Text, d);
-            
+
             _dierAsiel.AddProduct(product);
             _listViewProducten.Items.Clear();
             foreach (var p in _dierAsiel.WebshopList)
@@ -44,7 +44,5 @@ namespace Asiel.Windows
             }
             this.Close();
         }
-
-    
     }
 }

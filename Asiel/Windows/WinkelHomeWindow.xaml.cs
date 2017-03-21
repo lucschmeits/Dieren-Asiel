@@ -20,6 +20,7 @@ namespace Asiel.Windows
     public partial class WinkelHomeWindow : Window
     {
         private DierAsiel _dierAsiel;
+
         public WinkelHomeWindow(DierAsiel dierAsiel)
         {
             InitializeComponent();

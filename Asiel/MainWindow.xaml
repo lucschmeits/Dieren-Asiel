@@ -10,36 +10,35 @@
         <ListView x:Name="ListviewReservering" HorizontalAlignment="Left" Height="185" Margin="22,21,0,0" VerticalAlignment="Top" Width="538" MouseDoubleClick="ListviewReservering_MouseDoubleClick">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Persoon" Width="160" DisplayMemberBinding="{Binding persoon.naam}"/>
-                    <GridViewColumn Header="Dier" Width="160" DisplayMemberBinding="{Binding dier.DierSet}"/>
-                    <GridViewColumn Header="Datum" Width="160" DisplayMemberBinding="{Binding reserveerDateTime}"/>
+                    <GridViewColumn Header="Persoon" Width="160" DisplayMemberBinding="{Binding persoon.naam}" />
+                    <GridViewColumn Header="Dier" Width="160" DisplayMemberBinding="{Binding dier.DierSet}" />
+                    <GridViewColumn Header="Datum" Width="160" DisplayMemberBinding="{Binding reserveerDateTime}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="ListviewDier" HorizontalAlignment="Left" Height="185" Margin="22,249,0,0" VerticalAlignment="Top" Width="538" MouseDoubleClick="ListviewDier_MouseDoubleClick" SelectionMode="Single" >
+        <ListView x:Name="ListviewDier" HorizontalAlignment="Left" Height="185" Margin="22,249,0,0" VerticalAlignment="Top" Width="538" MouseDoubleClick="ListviewDier_MouseDoubleClick" SelectionMode="Single">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Naam" Width="170" DisplayMemberBinding="{Binding naam}"/>
-                    <GridViewColumn Header="Geslacht" Width="170" DisplayMemberBinding="{Binding GeslachtSet}"/>
-                    <GridViewColumn Header="Diertype" Width="170" DisplayMemberBinding="{Binding DierSet}"/>
+                    <GridViewColumn Header="Naam" Width="170" DisplayMemberBinding="{Binding naam}" />
+                    <GridViewColumn Header="Geslacht" Width="170" DisplayMemberBinding="{Binding GeslachtSet}" />
+                    <GridViewColumn Header="Diertype" Width="170" DisplayMemberBinding="{Binding DierSet}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="BtnWinkel" Content="Winkel" HorizontalAlignment="Left" Margin="1041,21,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FF51A060" Foreground="White" Click="BtnWinkel_Click"/>
-        <Button x:Name="btnNieuwDier" Content="Nieuw Dier" HorizontalAlignment="Left" Margin="1041,90,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFFF9B6D" Foreground="White" Click="btnNieuwDier_Click"/>
-        <Button x:Name="btnNieuwPersoon" Content="Nieuw Persoon" HorizontalAlignment="Left" Margin="1041,158,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFEAFD89" Foreground="#FF817171" Click="btnNieuwPersoon_Click"/>
+        <Button x:Name="BtnWinkel" Content="Winkel" HorizontalAlignment="Left" Margin="1041,21,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FF51A060" Foreground="White" Click="BtnWinkel_Click" />
+        <Button x:Name="btnNieuwDier" Content="Nieuw Dier" HorizontalAlignment="Left" Margin="1041,90,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFFF9B6D" Foreground="White" Click="btnNieuwDier_Click" />
+        <Button x:Name="btnNieuwPersoon" Content="Nieuw Persoon" HorizontalAlignment="Left" Margin="1041,158,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFEAFD89" Foreground="#FF817171" Click="btnNieuwPersoon_Click" />
         <ListView x:Name="ListviewPersoon" HorizontalAlignment="Left" Height="185" Margin="611,249,0,0" VerticalAlignment="Top" Width="422" MouseDoubleClick="ListviewPersoon_MouseDoubleClick">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Naam" Width="130" DisplayMemberBinding="{Binding naam}"/>
-                    <GridViewColumn Header="Achternaam" Width="140" DisplayMemberBinding="{Binding achternaam}"/>
-                    <GridViewColumn Header="Woonplaats" Width="140" DisplayMemberBinding="{Binding woonplaats}"/>
+                    <GridViewColumn Header="Naam" Width="130" DisplayMemberBinding="{Binding naam}" />
+                    <GridViewColumn Header="Achternaam" Width="140" DisplayMemberBinding="{Binding achternaam}" />
+                    <GridViewColumn Header="Woonplaats" Width="140" DisplayMemberBinding="{Binding woonplaats}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <DatePicker x:Name="DatePickerReservering" HorizontalAlignment="Left" Margin="611,63,0,0" VerticalAlignment="Top" Width="313"/>
-        <Button x:Name="BtnReserveer" Content="Reserveer" HorizontalAlignment="Left" Margin="1041,223,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFF15748" Foreground="White" Click="BtnReserveer_Click"/>
-        <Label Content="Selecteer datum voor reservering" HorizontalAlignment="Left" Margin="611,21,0,0" VerticalAlignment="Top" Foreground="White"/>
-
+        <DatePicker x:Name="DatePickerReservering" HorizontalAlignment="Left" Margin="611,63,0,0" VerticalAlignment="Top" Width="313" />
+        <Button x:Name="BtnReserveer" Content="Reserveer" HorizontalAlignment="Left" Margin="1041,223,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFF15748" Foreground="White" Click="BtnReserveer_Click" />
+        <Label Content="Selecteer datum voor reservering" HorizontalAlignment="Left" Margin="611,21,0,0" VerticalAlignment="Top" Foreground="White" />
     </Grid>
 </Window>

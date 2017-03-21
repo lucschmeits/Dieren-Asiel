@@ -7,7 +7,7 @@ using Asiel.Dieren;
 
 namespace Asiel
 {
-   public class Reservering
+    public class Reservering
     {
         private DateTime _reserveerDateTime;
 
@@ -42,14 +42,12 @@ namespace Asiel
         }
 
         public List<Dier> Dierlist { get; private set; }
-      
 
-        public Reservering(Persoon p, Dier d , DateTime datum)
+        public Reservering(Persoon p, Dier d, DateTime datum)
         {
             _persoon = p;
             _dier = d;
             _reserveerDateTime = datum;
-            
         }
     }
 }
