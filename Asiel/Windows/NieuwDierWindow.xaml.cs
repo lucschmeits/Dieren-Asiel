@@ -50,9 +50,11 @@ namespace Asiel
             {
                 var geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
                 var k = new Kat(TxtNaamDier.Text, geslacht);
+
                 _dierAsiel.AddKat(k);
                 _listViewDieren.Items.Clear();
                 VulView();
+                // k.BerekenPrijs();
                 this.Close();
             }
         }

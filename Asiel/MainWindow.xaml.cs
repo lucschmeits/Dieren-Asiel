@@ -34,16 +34,16 @@ namespace Asiel
 
         private void ListviewDier_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            try
-            {
-                var dier = (Dier)ListviewDier.SelectedItem;
-                var info = new DierInfoWindow(dier, _dierAsiel, ListviewDier);
-                info.Show();
-            }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("Er is geen dier geselecteerd.");
-            }
+            //try
+            //{
+            var dier = (Dier)ListviewDier.SelectedItem;
+            var info = new DierInfoWindow(dier, _dierAsiel, ListviewDier);
+            info.Show();
+            //////}
+            //catch (NullReferenceException)
+            //{
+            //    MessageBox.Show("Er is geen dier geselecteerd.");
+            //}
         }
 
         private void btnNieuwPersoon_Click(object sender, RoutedEventArgs e)

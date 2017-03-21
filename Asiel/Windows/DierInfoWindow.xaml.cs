@@ -40,7 +40,7 @@ namespace Asiel
             TxtNaam.Text = _dier.naam;
             TxtGeslacht.Text = _dier.GeslachtSet.ToString();
             TxtDierType.Text = _dier.GetType().Name;
-            TbPrijs.Text = _dier.Price.ToString();
+
             if (_dier.GetType() == typeof(Hond))
             {
                 var h = (Hond)_dier;
@@ -56,9 +56,11 @@ namespace Asiel
             if (_dier.GetType() == typeof(Kat))
             {
                 var k = (Kat)_dier;
+                k.BerekenPrijs();
                 DateUitgelaten.Visibility = Visibility.Hidden;
                 TxtInfo.Text = k.Info;
             }
+            TbPrijs.Text = _dier.Price.ToString();
         }
 
         private void BtnBijwerken_Click(object sender, RoutedEventArgs e)

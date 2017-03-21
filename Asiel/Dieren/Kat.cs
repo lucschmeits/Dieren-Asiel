@@ -15,5 +15,25 @@ namespace Asiel.Dieren
             base.naam = naam;
             base.GeslachtSet = geslacht;
         }
+
+        public void BerekenPrijs()
+        {
+            base.Price = 350;
+            if (String.IsNullOrEmpty(Info))
+            {
+            }
+            else
+            {
+                foreach (Char c in Info)
+                {
+                    base.Price = base.Price - 20;
+                }
+
+                if (Info.Length > 15)
+                {
+                    base.Price = 35;
+                }
+            }
+        }
     }
 }
