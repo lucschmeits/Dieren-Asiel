@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asiel.Dieren
 {
-  public abstract class Dier
+  public abstract class Dier : ISellable
     {
        
         public enum Geslacht
@@ -24,6 +24,7 @@ namespace Asiel.Dieren
             set { _naam = value; }
         }
 
-        
+        public string Naam { get; set; }
+        public decimal Price { get; set; }
     }
 }

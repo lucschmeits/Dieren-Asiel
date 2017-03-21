@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Webshop.cs" />
     <Compile Include="Windows\BeheerWindow.xaml.cs">
       <DependentUpon>BeheerWindow.xaml</DependentUpon>
     </Compile>
