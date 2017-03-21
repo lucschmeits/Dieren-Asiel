@@ -42,5 +42,12 @@ namespace Asiel.Windows
                 ListViewProducten.Items.Add(p);
             }
         }
+
+        private void BtnVerkoop_Click(object sender, RoutedEventArgs e)
+        {
+            var product = (Webshop)ListViewProducten.SelectedItem;
+            _dierAsiel.WebshopList.Remove(product);
+            AddProduct();
+        }
     }
 }

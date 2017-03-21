@@ -17,6 +17,6 @@
         </ListView>
         <Label Content="Producten:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Foreground="White" />
         <Button x:Name="BtnNieuwProduct" Content="Nieuw Product" HorizontalAlignment="Left" Margin="419,46,0,0" VerticalAlignment="Top" Width="248" Height="43" Background="#FFFF9B6D" Foreground="White" Click="BtnNieuwProduct_Click" />
-        <Button x:Name="BtnVerkoop" Content="Verkoop" HorizontalAlignment="Left" Margin="419,112,0,0" VerticalAlignment="Top" Width="248" Height="43" Foreground="White" Background="#FFB25656" />
+        <Button x:Name="BtnVerkoop" Content="Verkoop" HorizontalAlignment="Left" Margin="419,112,0,0" VerticalAlignment="Top" Width="248" Height="43" Foreground="White" Background="#FFB25656" Click="BtnVerkoop_Click" />
     </Grid>
 </Window>
