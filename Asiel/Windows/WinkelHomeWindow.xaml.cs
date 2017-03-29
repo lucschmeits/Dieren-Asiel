@@ -71,25 +71,33 @@ namespace Asiel.Windows
             string path = @"C:\test\webshop.txt";
             string line;
 
-            StreamReader file = new StreamReader(path);
-            while ((line = file.ReadLine()) != null)
+            try
             {
-                string[] x = line.Split(';');
-                try
+                if (File.Exists(path))
                 {
-                    for (int i = 0; i < x.Length; i = i + 2)
+                    StreamReader file = new StreamReader(path);
+                    while ((line = file.ReadLine()) != null)
                     {
-                        var p = new Webshop(x[i], Convert.ToDecimal(x[i + 1]));
-                        _dierAsiel.WebshopList.Add(p);
+                        string[] x = line.Split(';');
+
+                        for (int i = 0; i < x.Length; i = i + 2)
+                        {
+                            var p = new Webshop(x[i], Convert.ToDecimal(x[i + 1]));
+                            _dierAsiel.WebshopList.Add(p);
+                        }
+                        AddProduct();
                     }
-                    AddProduct();
+                    file.Close();
                 }
-                catch (IndexOutOfRangeException)
+                else
                 {
+                    throw new BestandNietGelezenException("Het bestand om de producten uit te lezen is niet gevonden");
                 }
             }
-
-            file.Close();
+            catch (BestandNietGelezenException e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

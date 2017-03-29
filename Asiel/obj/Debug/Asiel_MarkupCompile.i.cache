@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\obj\Debug\
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\
 Asiel
 none
 false
 DEBUG;TRACE
-C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\App.xaml
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\App.xaml
 91887539170
 
-25-1212336068
+26-1042240214
 13738642453
 Windows\BeheerWindow.xaml;Windows\DierInfoWindow.xaml;MainWindow.xaml;Windows\NieuwDierWindow.xaml;Windows\NieuwPersoonWindow.xaml;Windows\PersoonInfoWindow.xaml;Windows\ReserveringsInfoWindow.xaml;Windows\WinkelHomeWindow.xaml;Windows\WinkelNieuwProductWindow.xaml;
 
-True
+False
 
