@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 
         mc:Ignorable="d"
-        Title="Winkel" Height="391.079" Width="694.521" Background="#FF5F5C3B">
+        Title="Winkel" Height="391.079" Width="694.521" Background="#FF5F5C3B" Closed="Window_Closed">
     <Grid>
         <ListView x:Name="ListViewProducten" HorizontalAlignment="Left" Height="291" Margin="10,46,0,0" VerticalAlignment="Top" Width="310">
             <ListView.View>

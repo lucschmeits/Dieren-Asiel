@@ -128,8 +128,9 @@ namespace Asiel
 
         private void Window_Closed(object sender, EventArgs e)
         {
+            string path = @"C:\test\dierlist.xml";
             XmlSerializer xmlser = new XmlSerializer(typeof(List<Dier>), new Type[] { typeof(Hond), typeof(Kat) });
-            StreamWriter swtr = new StreamWriter(@"C:\test\dierlist.xml");
+            StreamWriter swtr = new StreamWriter(path);
             xmlser.Serialize(swtr, _dierAsiel.DierList);
             swtr.Close();
         }
@@ -137,18 +138,17 @@ namespace Asiel
         private void ReadTextFile()
         {
             string path = @"C:\test\dierlist.xml";
-            //Write text to list
-            if (File.Exists(path))
+            try
             {
                 XmlSerializer xmlser = new XmlSerializer(typeof(List<Dier>), new Type[] { typeof(Hond), typeof(Kat) });
-                StreamReader srdr = new StreamReader(@"C:\test\dierlist.xml");
+                StreamReader srdr = new StreamReader(path);
                 _dierAsiel.DierList = (List<Dier>)xmlser.Deserialize(srdr);
                 srdr.Close();
                 VulViewDier();
             }
-            else
+            catch (FileNotFoundException)
             {
-                MessageBox.Show("Bestand niet gevonden");
+                MessageBox.Show("Het bestand " + path + " bestaat nog niet");
             }
         }
 

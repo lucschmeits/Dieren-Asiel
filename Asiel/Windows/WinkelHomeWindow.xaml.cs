@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,18 @@ namespace Asiel.Windows
             var product = (Webshop)ListViewProducten.SelectedItem;
             _dierAsiel.WebshopList.Remove(product);
             AddProduct();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            string path = @"C:\test\webshop.txt";
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                foreach (var x in _dierAsiel.WebshopList)
+                {
+                    sw.WriteLine(x.Naam + ";" + x.Price);
+                }
+            }
         }
     }
 }
