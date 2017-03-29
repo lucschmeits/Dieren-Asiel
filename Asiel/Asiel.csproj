@@ -157,5 +157,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\Context\" />
+    <Folder Include="DAL\Interface\" />
+    <Folder Include="DAL\Repo\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

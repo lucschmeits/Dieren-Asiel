@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Input;
 using Asiel.Dieren;
@@ -16,6 +17,7 @@ namespace Asiel
         public MainWindow()
         {
             InitializeComponent();
+            //ReadTextFile();
         }
 
         private void btnNieuwDier_Click(object sender, RoutedEventArgs e)
@@ -113,6 +115,56 @@ namespace Asiel
         {
             var winkelHome = new WinkelHomeWindow(_dierAsiel);
             winkelHome.Show();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            string path = @"C:\test\testdier.txt";
+            if (File.Exists(path))
+            {
+                File.WriteAllText(path, String.Empty);
+                using (var sw = new StreamWriter(path))
+                {
+                    foreach (var a in _dierAsiel.DierList)
+                    {
+                        if (a.GetType() == typeof(Hond))
+                        {
+                            var x = (Hond)a;
+                            sw.WriteLine(x.GetType().Name + ";" + x.naam + ";" + x.GeslachtSet + ";" + x.LaatstUitgelaten + ";" + x.Price);
+                        }
+                        if (a.GetType() == typeof(Kat))
+                        {
+                            var x = (Kat)a;
+                            sw.WriteLine(x.GetType().Name + ";" + x.naam + ";" + x.GeslachtSet + ";" + x.Info + ";" + x.Price);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                File.Create(path);
+            }
+        }
+
+        private void ReadTextFile()
+        {
+            string path = @"C:\test\testdier.txt";
+            //Write text to list
+            if (File.Exists(@"C:\test.txt"))
+            {
+                string file_contents = "";
+                using (StreamReader r = new StreamReader(path))
+                {
+                    while (!r.EndOfStream)
+                    {
+                        file_contents += r.ReadLine();
+                    }
+                }
+            }
+            else
+            {
+                File.Create(@"C:\test.txt");
+            }
         }
     }
 }

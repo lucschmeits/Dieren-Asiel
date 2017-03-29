@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Asiel"
         mc:Ignorable="d"
-       Title="Dieren asiel" Height="506.103" Width="1320.224" Background="#FF5F5C3B" FontFamily="Global Sans Serif" FontSize="16">
+       Title="Dieren asiel" Height="506.103" Width="1320.224" Background="#FF5F5C3B" FontFamily="Global Sans Serif" FontSize="16" Closed="Window_Closed">
     <Grid>
         <ListView x:Name="ListviewReservering" HorizontalAlignment="Left" Height="185" Margin="22,21,0,0" VerticalAlignment="Top" Width="538" MouseDoubleClick="ListviewReservering_MouseDoubleClick">
             <ListView.View>
