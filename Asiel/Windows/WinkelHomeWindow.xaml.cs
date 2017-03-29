@@ -27,6 +27,7 @@ namespace Asiel.Windows
             InitializeComponent();
             _dierAsiel = dierAsiel;
             AddProduct();
+            ReadWebshopProduct();
         }
 
         private void BtnNieuwProduct_Click(object sender, RoutedEventArgs e)
@@ -54,13 +55,41 @@ namespace Asiel.Windows
         private void Window_Closed(object sender, EventArgs e)
         {
             string path = @"C:\test\webshop.txt";
+            File.WriteAllText(path, String.Empty);
             using (StreamWriter sw = new StreamWriter(path))
             {
                 foreach (var x in _dierAsiel.WebshopList)
                 {
                     sw.WriteLine(x.Naam + ";" + x.Price);
                 }
+                _dierAsiel.WebshopList.Clear();
             }
+        }
+
+        private void ReadWebshopProduct()
+        {
+            string path = @"C:\test\webshop.txt";
+            string line;
+
+            StreamReader file = new StreamReader(path);
+            while ((line = file.ReadLine()) != null)
+            {
+                string[] x = line.Split(';');
+                try
+                {
+                    for (int i = 0; i < x.Length; i = i + 2)
+                    {
+                        var p = new Webshop(x[i], Convert.ToDecimal(x[i + 1]));
+                        _dierAsiel.WebshopList.Add(p);
+                    }
+                    AddProduct();
+                }
+                catch (IndexOutOfRangeException)
+                {
+                }
+            }
+
+            file.Close();
         }
     }
 }
