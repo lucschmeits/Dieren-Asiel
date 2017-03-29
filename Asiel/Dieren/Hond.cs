@@ -13,10 +13,8 @@ namespace Asiel.Dieren
         private static int _i;
         public DateTime LaatstUitgelaten { get; set; }
 
-        public Hond(string naam, Geslacht geslacht)
+        public Hond()
         {
-            base.naam = naam;
-            base.GeslachtSet = geslacht;
         }
 
         public void BerekenPrijs(List<Dier> dierList)

@@ -9,7 +9,7 @@ namespace Asiel
 {
     public class DierAsiel
     {
-        public List<Dier> DierList { get; } = new List<Dier>();
+        public List<Dier> DierList { get; set; } = new List<Dier>();
 
         public List<Persoon> PersoonList { get; } = new List<Persoon>();
 

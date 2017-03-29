@@ -10,10 +10,8 @@ namespace Asiel.Dieren
     {
         public string Info { get; set; }
 
-        public Kat(string naam, Geslacht geslacht)
+        public Kat()
         {
-            base.naam = naam;
-            base.GeslachtSet = geslacht;
         }
 
         public void BerekenPrijs()

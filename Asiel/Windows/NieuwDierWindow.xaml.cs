@@ -38,8 +38,9 @@ namespace Asiel
             if ((string)CmbDierType.SelectedItem == "Hond")
             {
                 var geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
-                var h = new Hond(TxtNaamDier.Text, geslacht);
-
+                var h = new Hond();
+                h.naam = TxtNaamDier.Text;
+                h.GeslachtSet = geslacht;
                 _dierAsiel.AddDog(h);
                 _listViewDieren.Items.Clear();
                 VulView();
@@ -49,9 +50,11 @@ namespace Asiel
             if ((string)CmbDierType.SelectedItem == "Kat")
             {
                 var geslacht = (Dier.Geslacht)CmbGeslacht.SelectedItem;
-                var k = new Kat(TxtNaamDier.Text, geslacht);
-
+                var k = new Kat();
+                k.naam = TxtNaamDier.Text;
+                k.GeslachtSet = geslacht;
                 _dierAsiel.AddKat(k);
+
                 _listViewDieren.Items.Clear();
                 VulView();
                 // k.BerekenPrijs();

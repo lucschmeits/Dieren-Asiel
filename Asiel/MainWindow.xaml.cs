@@ -1,7 +1,16 @@
 ﻿using System;
+using System.CodeDom;
+using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
+using System.Linq;
+using System.Net;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Shapes;
+using System.Xml;
+using System.Xml.Serialization;
+using System.Xml.XPath;
 using Asiel.Dieren;
 using Asiel.Windows;
 
@@ -17,7 +26,7 @@ namespace Asiel
         public MainWindow()
         {
             InitializeComponent();
-            //ReadTextFile();
+            ReadTextFile();
         }
 
         private void btnNieuwDier_Click(object sender, RoutedEventArgs e)
@@ -119,51 +128,35 @@ namespace Asiel
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            string path = @"C:\test\testdier.txt";
-            if (File.Exists(path))
-            {
-                File.WriteAllText(path, String.Empty);
-                using (var sw = new StreamWriter(path))
-                {
-                    foreach (var a in _dierAsiel.DierList)
-                    {
-                        if (a.GetType() == typeof(Hond))
-                        {
-                            var x = (Hond)a;
-                            sw.WriteLine(x.GetType().Name + ";" + x.naam + ";" + x.GeslachtSet + ";" + x.LaatstUitgelaten + ";" + x.Price);
-                        }
-                        if (a.GetType() == typeof(Kat))
-                        {
-                            var x = (Kat)a;
-                            sw.WriteLine(x.GetType().Name + ";" + x.naam + ";" + x.GeslachtSet + ";" + x.Info + ";" + x.Price);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                File.Create(path);
-            }
+            XmlSerializer xmlser = new XmlSerializer(typeof(List<Dier>), new Type[] { typeof(Hond), typeof(Kat) });
+            StreamWriter swtr = new StreamWriter(@"C:\test\dierlist.xml");
+            xmlser.Serialize(swtr, _dierAsiel.DierList);
+            swtr.Close();
         }
 
         private void ReadTextFile()
         {
-            string path = @"C:\test\testdier.txt";
+            string path = @"C:\test\dierlist.xml";
             //Write text to list
-            if (File.Exists(@"C:\test.txt"))
+            if (File.Exists(path))
             {
-                string file_contents = "";
-                using (StreamReader r = new StreamReader(path))
-                {
-                    while (!r.EndOfStream)
-                    {
-                        file_contents += r.ReadLine();
-                    }
-                }
+                XmlSerializer xmlser = new XmlSerializer(typeof(List<Dier>), new Type[] { typeof(Hond), typeof(Kat) });
+                StreamReader srdr = new StreamReader(@"C:\test\dierlist.xml");
+                _dierAsiel.DierList = (List<Dier>)xmlser.Deserialize(srdr);
+                srdr.Close();
+                VulViewDier();
             }
             else
             {
-                File.Create(@"C:\test.txt");
+                MessageBox.Show("Bestand niet gevonden");
+            }
+        }
+
+        private void VulViewDier()
+        {
+            foreach (var d in _dierAsiel.DierList)
+            {
+                ListviewDier.Items.Add(d);
             }
         }
     }
