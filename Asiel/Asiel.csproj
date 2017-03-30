@@ -55,6 +55,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BestandNietGelezenException.cs" />
+    <Compile Include="DAL\Context\DierFileContext.cs" />
+    <Compile Include="DAL\Interface\IFileDier.cs" />
+    <Compile Include="DAL\Repo\DierRepository.cs" />
     <Compile Include="Webshop.cs" />
     <Compile Include="Windows\BeheerWindow.xaml.cs">
       <DependentUpon>BeheerWindow.xaml</DependentUpon>
@@ -158,10 +161,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\Context\" />
-    <Folder Include="DAL\Interface\" />
-    <Folder Include="DAL\Repo\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
