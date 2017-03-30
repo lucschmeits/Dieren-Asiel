@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Asiel.DAL.Interface
 {
-    interface IFileDier
+    public interface IFileDier
     {
+        void SaveDierToFile(DierAsiel dierAsiel);
+
+        void GetDierFromFile(DierAsiel dierAsiel);
     }
 }

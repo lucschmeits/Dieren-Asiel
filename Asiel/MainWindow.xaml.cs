@@ -11,6 +11,9 @@ using System.Windows.Shapes;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.XPath;
+using Asiel.DAL.Context;
+using Asiel.DAL.Interface;
+using Asiel.DAL.Repo;
 using Asiel.Dieren;
 using Asiel.Windows;
 
@@ -22,6 +25,7 @@ namespace Asiel
     public partial class MainWindow : Window
     {
         private readonly DierAsiel _dierAsiel = new DierAsiel();
+        private DierRepository dierRepository = new DierRepository(new DierFileContext());
 
         public MainWindow()
         {
@@ -128,28 +132,13 @@ namespace Asiel
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            string path = @"C:\test\dierlist.xml";
-            XmlSerializer xmlser = new XmlSerializer(typeof(List<Dier>), new Type[] { typeof(Hond), typeof(Kat) });
-            StreamWriter swtr = new StreamWriter(path);
-            xmlser.Serialize(swtr, _dierAsiel.DierList);
-            swtr.Close();
+            dierRepository.SaveDierToFile(_dierAsiel);
         }
 
         private void ReadTextFile()
         {
-            string path = @"C:\test\dierlist.xml";
-            try
-            {
-                XmlSerializer xmlser = new XmlSerializer(typeof(List<Dier>), new Type[] { typeof(Hond), typeof(Kat) });
-                StreamReader srdr = new StreamReader(path);
-                _dierAsiel.DierList = (List<Dier>)xmlser.Deserialize(srdr);
-                srdr.Close();
-                VulViewDier();
-            }
-            catch (FileNotFoundException)
-            {
-                MessageBox.Show("Het bestand " + path + " bestaat nog niet");
-            }
+            dierRepository.GetDierFromFile(_dierAsiel);
+            VulViewDier();
         }
 
         private void VulViewDier()

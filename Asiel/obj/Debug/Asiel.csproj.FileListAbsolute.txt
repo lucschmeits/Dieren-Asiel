@@ -28,3 +28,7 @@ C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\WinkelHomeWindow.g.cs
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\WinkelNieuwProductWindow.g.cs
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\obj\Debug\Windows\WinkelNieuwProductWindow.baml
+C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\bin\Debug\Asiel.exe.manifest
+C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\bin\Debug\Asiel.application
+C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.exe.manifest
+C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.application
