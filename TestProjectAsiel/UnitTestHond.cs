@@ -14,7 +14,9 @@ namespace TestProjectAsiel
         [TestInitialize]
         public void TestMethod1()
         {
-            //this.hond = new Hond("Hondje", Dier.Geslacht.Man);
+            this.hond = new Hond();
+            hond.naam = "Hondje";
+            hond.GeslachtSet = Dier.Geslacht.Man;
         }
 
         [TestMethod]

@@ -14,8 +14,10 @@ namespace TestProjectAsiel
         [TestInitialize]
         public void TestMethod1()
         {
-            //  this.kat = new Kat("katje", Dier.Geslacht.Man);
-            // kat.Info = "Hallo";
+            this.kat = new Kat();
+            kat.naam = "katje";
+            kat.GeslachtSet = Dier.Geslacht.Man;
+            kat.Info = "Hallo";
         }
 
         [TestMethod]
