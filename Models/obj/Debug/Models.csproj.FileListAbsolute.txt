@@ -2,3 +2,4 @@ C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Models\bin\Debug\Models
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Models\bin\Debug\Models.pdb
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Models\obj\Debug\Models.dll
 C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Models\obj\Debug\Models.pdb
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

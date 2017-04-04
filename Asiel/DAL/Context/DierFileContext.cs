@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Xml.Serialization;
 using Asiel.DAL.Interface;
-using Asiel.Dieren;
+using Models;
 
 namespace Asiel.DAL.Context
 {

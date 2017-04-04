@@ -2,7 +2,6 @@
 using Asiel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models;
-using Asiel.Dieren;
 
 namespace TestProjectAsiel
 {

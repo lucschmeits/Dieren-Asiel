@@ -4,6 +4,7 @@ using System.Windows.Input;
 using Asiel.DAL.Context;
 using Asiel.DAL.Repo;
 using Asiel.Windows;
+using Models;
 
 namespace Asiel
 {
