@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Asiel.Dieren
+namespace Asiel
 {
     public abstract class Dier : ISellable
     {

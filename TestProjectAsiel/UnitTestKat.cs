@@ -1,6 +1,7 @@
 ﻿using System;
 using Asiel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Models;
 using Asiel.Dieren;
 
 namespace TestProjectAsiel
@@ -13,7 +14,7 @@ namespace TestProjectAsiel
         [TestInitialize]
         public void TestMethod1()
         {
-            this.kat = new Kat("katje", Dier.Geslacht.Man);
+            //  this.kat = new Kat("katje", Dier.Geslacht.Man);
             // kat.Info = "Hallo";
         }
 

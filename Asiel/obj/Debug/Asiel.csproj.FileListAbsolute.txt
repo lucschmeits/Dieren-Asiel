@@ -32,3 +32,5 @@ C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\bin\Debug\Asiel.e
 C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\bin\Debug\Asiel.application
 C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.exe.manifest
 C:\Users\Luc\Documents\Visual Studio 2017\Projects\Asiel\Asiel\obj\Debug\Asiel.application
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\bin\Debug\Models.dll
+C:\Users\Luc\documents\visual studio 2017\Projects\Asiel\Asiel\bin\Debug\Models.pdb

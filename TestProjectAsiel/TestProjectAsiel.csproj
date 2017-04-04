@@ -61,6 +61,10 @@
       <Project>{760daa02-e927-45fc-b70c-24be1b42e381}</Project>
       <Name>Asiel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{bbdc9ab8-e790-4031-a5f8-f786af3bcec5}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

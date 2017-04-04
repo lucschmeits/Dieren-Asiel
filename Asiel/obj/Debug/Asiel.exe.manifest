@@ -42,14 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Asiel.exe" size="54720">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Asiel.exe" size="51648">
       <assemblyIdentity name="Asiel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>o3mW4DMOILZcOiI6z5IU2agNxIxcoQsRnaxYR7I9cbM=</dsig:DigestValue>
+        <dsig:DigestValue>7dJVPNh8LAYluBRkALZUzfsRXRUY5JxkAETr+yCOcz0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Models.dll" size="8704">
+      <assemblyIdentity name="Models" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>CxoeOXyr8SAzzLXn2VXnE8nFFQsk6FAOvAdKoUy+DAM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

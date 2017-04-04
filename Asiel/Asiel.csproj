@@ -87,7 +87,6 @@
     <Compile Include="DAL\Context\DierFileContext.cs" />
     <Compile Include="DAL\Interface\IFileDier.cs" />
     <Compile Include="DAL\Repo\DierRepository.cs" />
-    <Compile Include="Webshop.cs" />
     <Compile Include="Windows\BeheerWindow.xaml.cs">
       <DependentUpon>BeheerWindow.xaml</DependentUpon>
     </Compile>
@@ -95,20 +94,15 @@
     <Compile Include="Windows\DierInfoWindow.xaml.cs">
       <DependentUpon>DierInfoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dieren\Hond.cs" />
-    <Compile Include="Dieren\Kat.cs" />
-    <Compile Include="Interfaces\ISellable.cs" />
     <Compile Include="Windows\NieuwDierWindow.xaml.cs">
       <DependentUpon>NieuwDierWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\NieuwPersoonWindow.xaml.cs">
       <DependentUpon>NieuwPersoonWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Persoon.cs" />
     <Compile Include="Windows\PersoonInfoWindow.xaml.cs">
       <DependentUpon>PersoonInfoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Reservering.cs" />
     <Compile Include="Windows\ReserveringsInfoWindow.xaml.cs">
       <DependentUpon>ReserveringsInfoWindow.xaml</DependentUpon>
     </Compile>
@@ -134,7 +128,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Dieren\Dier.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -202,6 +195,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{bbdc9ab8-e790-4031-a5f8-f786af3bcec5}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
